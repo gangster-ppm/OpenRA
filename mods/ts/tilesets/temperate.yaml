@@ -3,7 +3,7 @@ General:
 	Id: TEMPERATE
 	HeightDebugColors: 00000080, 00004480, 00008880, 0000CC80, 0000FF80, 4400CC80, 88008880, CC004480, FF110080, FF550080, FF990080, FFDD0080, DDFF0080, 99FF0080, 55FF0080, 11FF0080
 	EditorTemplateOrder: Misc Buildings, Clear, Cliff Pieces, Ice Flow, House, Blank, Ice Ramps, Cliff Set, Civilian Buildings, Shore Pieces, Rough LAT tile, Clear/Rough LAT, Cliff/Water pieces, Bendy Dirt Roads, Dirt Road Junctions, Straight Dirt Roads, Bridges, Paved Roads, Water, Dirt Road Slopes, Slope Set Pieces, Dead Oil Tanker, Ruins, Waterfalls, Ground 01, Ground 02, Sand, Sand/Clear LAT, Rough ground, Paved Road Ends, TrainBridges, Pavement, Pavement/Clear LAT, Paved road bits, Green, Green/Clear LAT, Ramp edge fixup, Water slopes, Pavement (Use for LAT), Paved Road Slopes, Monorail Slopes, Waterfalls-B, Waterfalls-C, Waterfalls-D, Tunnel Floor, Tunnel Side, TrackTunnel Floor, Destroyable Cliffs, Water Caves, Scrin Wreckage, DirtTrackTunnel Floor, DirtTunnel Floor, Crystal LAT tile, Clear Crystal LAT, Swampy, Swampy LAT, Blue Mold, Blue Mold LAT, Crystal Cliff, Kodiak Crash
-	SheetSize: 2048
+	SheetSize: 4096
 	EnableDepth: true
 	MinHeightColorBrightness: 1.0
 	MaxHeightColorBrightness: 1.6
@@ -83,8 +83,9 @@ Terrain:
 Templates:
 	Template@0:
 		Categories: Clear
+		Palette: rw_isotem_basic
 		Id: 0
-		Images: clear01.tem, clear01a.tem, clear01b.tem, clear01c.tem, clear01d.tem, clear01e.tem, clear01f.tem, clear01g.tem
+		Images: Clear01.tem, Clear01a.tem, Clear01b.tem, Clear01c.tem, Clear01d.tem, Clear01e.tem, Clear01f.tem, Clear01g.tem, Clear01h.tem, Clear01i.tem, Clear01j.tem, Clear01k.tem, Clear01l.tem, Clear01m.tem, Clear01n.tem, Clear01o.tem,  Clear01p.tem, Clear01q.tem, Clear01r.tem, Clear01s.tem, Clear01t.tem, Clear01u.tem, Clear01v.tem, Clear01w.tem, Clear01x.tem, Clear01y.tem, Clear01z.tem
 		Size: 1, 1
 		Tiles:
 			0: Clear
@@ -1912,6 +1913,7 @@ Templates:
 		Categories: Shore Pieces
 		Id: 116
 		Images: shore09.tem
+		Palette: rw_tem_water1
 		Size: 2, 2
 		Tiles:
 			0: Water
@@ -1938,6 +1940,7 @@ Templates:
 		Categories: Shore Pieces
 		Id: 117
 		Images: shore10.tem
+		Palette: rw_tem_water1
 		Size: 2, 2
 		Tiles:
 			0: Water
@@ -1964,6 +1967,7 @@ Templates:
 		Categories: Shore Pieces
 		Id: 118
 		Images: shore11.tem
+		Palette: rw_tem_water1
 		Size: 2, 2
 		Tiles:
 			0: Water
@@ -3040,7 +3044,8 @@ Templates:
 	Template@150:
 		Categories: Rough LAT tile
 		Id: 150
-		Images: ruff01.tem, ruff01a.tem, ruff01b.tem, ruff01c.tem, ruff01d.tem, ruff01e.tem, ruff01f.tem, ruff01g.tem
+		Palette: rw_isotem_basic
+		Images: ruff01.tem, ruff01a.tem, ruff01b.tem, ruff01c.tem, ruff01d.tem, ruff01e.tem, ruff01f.tem, ruff01g.tem, ruff01h.tem, ruff01i.tem, ruff01j.tem, ruff01k.tem, ruff01l.tem, ruff01m.tem, ruff01n.tem, ruff01o.tem,  ruff01p.tem, ruff01q.tem, ruff01r.tem, ruff01s.tem, ruff01t.tem, ruff01u.tem, ruff01v.tem, ruff01w.tem, ruff01x.tem, ruff01y.tem, ruff01z.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -3051,7 +3056,8 @@ Templates:
 	Template@151:
 		Categories: Clear/Rough LAT
 		Id: 151
-		Images: clat01.tem, clat01a.tem
+		Palette: rw_isotem_basic
+		Images: clat01.tem, clat01a.tem, clat01b.tem, clat01c.tem, clat01d.tem, clat01e.tem, clat01f.tem, clat01g.tem, clat01h.tem, clat01i.tem, clat01j.tem, clat01k.tem, clat01l.tem, clat01m.tem, clat01n.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -3062,7 +3068,8 @@ Templates:
 	Template@152:
 		Categories: Clear/Rough LAT
 		Id: 152
-		Images: clat02.tem, clat02a.tem
+		Palette: rw_isotem_basic
+		Images: clat02.tem, clat02a.tem, clat02b.tem, clat02c.tem, clat02d.tem, clat02e.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -3073,7 +3080,8 @@ Templates:
 	Template@153:
 		Categories: Clear/Rough LAT
 		Id: 153
-		Images: clat03.tem, clat03a.tem
+		Palette: rw_isotem_basic
+		Images: clat03.tem, clat03a.tem, clat03b.tem, clat03c.tem, clat03d.tem, clat03e.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -3084,7 +3092,8 @@ Templates:
 	Template@154:
 		Categories: Clear/Rough LAT
 		Id: 154
-		Images: clat04.tem, clat04a.tem
+		Palette: rw_isotem_basic
+		Images: clat04.tem, clat04a.tem, clat04b.tem, clat04c.tem, clat04d.tem, clat04e.tem, clat04f.tem, clat04g.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -3095,7 +3104,8 @@ Templates:
 	Template@155:
 		Categories: Clear/Rough LAT
 		Id: 155
-		Images: clat05.tem, clat05a.tem
+		Palette: rw_isotem_basic
+		Images: clat05.tem, clat05a.tem, clat05b.tem, clat05c.tem, clat05d.tem, clat05e.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -3106,7 +3116,8 @@ Templates:
 	Template@156:
 		Categories: Clear/Rough LAT
 		Id: 156
-		Images: clat06.tem, clat06a.tem
+		Palette: rw_isotem_basic
+		Images: clat06.tem, clat06a.tem, clat06b.tem, clat06c.tem, clat06d.tem, clat06e.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -3117,7 +3128,8 @@ Templates:
 	Template@157:
 		Categories: Clear/Rough LAT
 		Id: 157
-		Images: clat07.tem, clat07a.tem
+		Palette: rw_isotem_basic
+		Images: clat07.tem, clat07a.tem, clat07b.tem, clat07c.tem, clat07d.tem, clat07e.tem, clat07f.tem, clat07g.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -3128,7 +3140,8 @@ Templates:
 	Template@158:
 		Categories: Clear/Rough LAT
 		Id: 158
-		Images: clat08.tem, clat08a.tem
+		Palette: rw_isotem_basic
+		Images: clat08.tem, clat08a.tem, clat08b.tem, clat08c.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -3139,7 +3152,8 @@ Templates:
 	Template@159:
 		Categories: Clear/Rough LAT
 		Id: 159
-		Images: clat09.tem, clat09a.tem
+		Palette: rw_isotem_basic
+		Images: clat09.tem, clat09a.tem, clat09b.tem, clat09c.tem, clat09d.tem, clat09e.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -3150,7 +3164,8 @@ Templates:
 	Template@160:
 		Categories: Clear/Rough LAT
 		Id: 160
-		Images: clat10.tem, clat10a.tem
+		Palette: rw_isotem_basic
+		Images: clat10.tem, clat10a.tem, clat10b.tem, clat10c.tem, clat10d.tem, clat10e.tem, clat10f.tem, clat10g.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -3161,7 +3176,8 @@ Templates:
 	Template@161:
 		Categories: Clear/Rough LAT
 		Id: 161
-		Images: clat11.tem, clat11a.tem
+		Palette: rw_isotem_basic
+		Images: clat11.tem, clat11a.tem, clat11b.tem, clat11c.tem, clat11d.tem, clat11e.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -3172,7 +3188,8 @@ Templates:
 	Template@162:
 		Categories: Clear/Rough LAT
 		Id: 162
-		Images: clat12.tem, clat12a.tem
+		Palette: rw_isotem_basic
+		Images: clat12.tem, clat12a.tem, clat12b.tem, clat12c.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -3183,7 +3200,8 @@ Templates:
 	Template@163:
 		Categories: Clear/Rough LAT
 		Id: 163
-		Images: clat13.tem, clat13a.tem
+		Palette: rw_isotem_basic
+		Images: clat13.tem, clat13a.tem, clat13b.tem, clat13c.tem, clat13d.tem, clat13e.tem, clat13f.tem, clat13g.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -3194,6 +3212,7 @@ Templates:
 	Template@164:
 		Categories: Clear/Rough LAT
 		Id: 164
+		Palette: rw_isotem_basic
 		Images: clat14.tem, clat14a.tem
 		Size: 1, 1
 		Tiles:
@@ -3205,7 +3224,8 @@ Templates:
 	Template@165:
 		Categories: Clear/Rough LAT
 		Id: 165
-		Images: clat15.tem, clat15a.tem
+		Palette: rw_isotem_basic
+		Images: clat15.tem, clat15a.tem, clat15b.tem, clat15c.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -3216,7 +3236,8 @@ Templates:
 	Template@166:
 		Categories: Clear/Rough LAT
 		Id: 166
-		Images: clat16.tem, clat16a.tem
+		Palette: rw_isotem_basic
+		Images: clat16.tem, clat16a.tem, clat16b.tem, clat16c.tem, clat16d.tem, clat16e.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -10028,6 +10049,7 @@ Templates:
 		Categories: Water
 		Id: 337
 		Images: water05.tem
+		Palette: rw_tem_water1
 		Size: 2, 2
 		Tiles:
 			0: Water
@@ -10053,6 +10075,7 @@ Templates:
 	Template@338:
 		Categories: Water
 		Id: 338
+		Palette: rw_tem_water1
 		Images: water06.tem
 		Size: 2, 2
 		Tiles:
@@ -10080,6 +10103,7 @@ Templates:
 		Categories: Water
 		Id: 339
 		Images: water07.tem
+		Palette: rw_tem_water1
 		Size: 2, 2
 		Tiles:
 			0: Cliff
@@ -12320,7 +12344,8 @@ Templates:
 	Template@535:
 		Categories: Sand
 		Id: 535
-		Images: sandy01.tem, sandy01a.tem, sandy01b.tem, sandy01c.tem, sandy01d.tem, sandy01e.tem, sandy01f.tem, sandy01g.tem
+		Palette: rw_tem_beach1
+		Images: sandy01.tem, sandy01a.tem, sandy01b.tem, sandy01c.tem, sandy01d.tem, sandy01e.tem, sandy01f.tem, sandy01g.tem, sandy01h.tem, sandy01i.tem, sandy01j.tem, sandy01k.tem, sandy01l.tem, sandy01m.tem, sandy01n.tem, sandy01o.tem, sandy01p.tem, sandy01q.tem, sandy01r.tem, sandy01s.tem, sandy01t.tem, sandy01u.tem, sandy01v.tem, sandy01w.tem, sandy01x.tem, sandy01y.tem, sandy01z.tem, sandy01zz.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12331,7 +12356,8 @@ Templates:
 	Template@536:
 		Categories: Sand/Clear LAT
 		Id: 536
-		Images: dlat01.tem, dlat01a.tem
+		Palette: rw_tem_beach1
+		Images: dlat01.tem, dlat01a.tem, dlat01b.tem, dlat01c.tem, dlat01d.tem, dlat01e.tem, dlat01f.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12342,7 +12368,8 @@ Templates:
 	Template@537:
 		Categories: Sand/Clear LAT
 		Id: 537
-		Images: dlat02.tem, dlat02a.tem
+		Palette: rw_tem_beach1
+		Images: dlat02.tem, dlat02a.tem, dlat02b.tem, dlat02c.tem, dlat02d.tem, dlat02e.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12353,7 +12380,8 @@ Templates:
 	Template@538:
 		Categories: Sand/Clear LAT
 		Id: 538
-		Images: dlat03.tem, dlat03a.tem
+		Palette: rw_tem_beach1
+		Images: dlat03.tem, dlat03a.tem, dlat03b.tem, dlat03c.tem, dlat03d.tem, dlat03e.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12364,7 +12392,8 @@ Templates:
 	Template@539:
 		Categories: Sand/Clear LAT
 		Id: 539
-		Images: dlat04.tem, dlat04a.tem
+		Palette: rw_tem_beach1
+		Images: dlat04.tem, dlat04a.tem, dlat04b.tem, dlat04c.tem, dlat04d.tem, dlat04e.tem, dlat04f.tem, dlat04g.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12375,7 +12404,8 @@ Templates:
 	Template@540:
 		Categories: Sand/Clear LAT
 		Id: 540
-		Images: dlat05.tem, dlat05a.tem
+		Palette: rw_tem_beach1
+		Images: dlat05.tem, dlat05a.tem, dlat05b.tem, dlat05c.tem, dlat05d.tem, dlat05e.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12386,7 +12416,8 @@ Templates:
 	Template@541:
 		Categories: Sand/Clear LAT
 		Id: 541
-		Images: dlat06.tem, dlat06a.tem
+		Palette: rw_tem_beach1
+		Images: dlat06.tem, dlat06a.tem, dlat06b.tem, dlat06c.tem, dlat06d.tem, dlat06e.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12397,7 +12428,8 @@ Templates:
 	Template@542:
 		Categories: Sand/Clear LAT
 		Id: 542
-		Images: dlat07.tem, dlat07a.tem
+		Palette: rw_tem_beach1
+		Images: dlat07.tem, dlat07a.tem, dlat07b.tem, dlat07c.tem, dlat07d.tem, dlat07e.tem, dlat07f.tem, dlat07g.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12408,7 +12440,8 @@ Templates:
 	Template@543:
 		Categories: Sand/Clear LAT
 		Id: 543
-		Images: dlat08.tem, dlat08a.tem
+		Palette: rw_tem_beach1
+		Images: dlat08.tem, dlat08a.tem, dlat08b.tem, dlat08c.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12419,7 +12452,8 @@ Templates:
 	Template@544:
 		Categories: Sand/Clear LAT
 		Id: 544
-		Images: dlat09.tem, dlat09a.tem
+		Palette: rw_tem_beach1
+		Images: dlat09.tem, dlat09a.tem, dlat09b.tem, dlat09c.tem, dlat09d.tem, dlat09e.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12430,7 +12464,8 @@ Templates:
 	Template@545:
 		Categories: Sand/Clear LAT
 		Id: 545
-		Images: dlat10.tem, dlat10a.tem
+		Palette: rw_tem_beach1
+		Images: dlat10.tem, dlat10a.tem, dlat10b.tem, dlat10c.tem, dlat10d.tem, dlat10e.tem, dlat10f.tem, dlat10g.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12441,7 +12476,8 @@ Templates:
 	Template@546:
 		Categories: Sand/Clear LAT
 		Id: 546
-		Images: dlat11.tem, dlat11a.tem
+		Palette: rw_tem_beach1
+		Images: dlat11.tem, dlat11a.tem, dlat11b.tem, dlat11c.tem, dlat11d.tem, dlat11e.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12452,7 +12488,8 @@ Templates:
 	Template@547:
 		Categories: Sand/Clear LAT
 		Id: 547
-		Images: dlat12.tem, dlat12a.tem
+		Palette: rw_tem_beach1
+		Images: dlat12.tem, dlat12a.tem, dlat12b.tem, dlat12c.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12463,7 +12500,8 @@ Templates:
 	Template@548:
 		Categories: Sand/Clear LAT
 		Id: 548
-		Images: dlat13.tem, dlat13a.tem
+		Palette: rw_tem_beach1
+		Images: dlat13.tem, dlat13a.tem, dlat13b.tem, dlat13c.tem, dlat13d.tem, dlat13e.tem, dlat13f.tem, dlat13g.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12474,7 +12512,8 @@ Templates:
 	Template@549:
 		Categories: Sand/Clear LAT
 		Id: 549
-		Images: dlat14.tem, dlat14a.tem
+		Palette: rw_tem_beach1
+		Images: dlat14.tem, dlat14a.tem, dlat14b.tem, dlat14c.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12485,7 +12524,8 @@ Templates:
 	Template@550:
 		Categories: Sand/Clear LAT
 		Id: 550
-		Images: dlat15.tem, dlat15a.tem
+		Palette: rw_tem_beach1
+		Images: dlat15.tem, dlat15a.tem, dlat15b.tem, dlat15c.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -12496,7 +12536,8 @@ Templates:
 	Template@551:
 		Categories: Sand/Clear LAT
 		Id: 551
-		Images: dlat16.tem, dlat16a.tem
+		Palette: rw_tem_beach1
+		Images: dlat16.tem, dlat16a.tem, dlat16b.tem, dlat16c.tem, dlat16d.tem, dlat16e.tem, dlat16f.tem, dlat16g.tem, dlat16h.tem, dlat16i.tem, dlat16j.tem, dlat16k.tem, dlat16l.tem, dlat16m.tem, dlat16n.tem
 		Size: 1, 1
 		Tiles:
 			0: Rough
@@ -20472,5 +20513,245 @@ Templates:
 			41: Cliff
 				MinColor: 5C5041
 				MaxColor: 585349
+				ZOffset: -12
+				ZRamp: 0
+	Template@ClearGrassy:
+		Categories: Clear
+		Palette: rw_isotem_basic
+		Id: 1032
+		Images: Clearb01.tem, Clearb01a.tem, Clearb01b.tem, Clearb01c.tem, Clearb01d.tem, Clearb01e.tem, Clearb01f.tem
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 6D573D
+				MaxColor: 6F593E
+				ZOffset: 12
+				ZRamp: 0
+	Template@ClearRocky:
+		Categories: Clear
+		Palette: rw_isotem_basic
+		Id: 1033
+		Images: Clearc01.tem, Clearc01a.tem, Clearc01b.tem, Clearc01c.tem, Clearc01d.tem, Clearc01e.tem, Clearc01f.tem, Clearc01g.tem, Clearc01h.tem, Clearc01i.tem, Clearc01j.tem, Clearc01k.tem, Clearc01l.tem, Clearc01m.tem, Clearc01n.tem, Clearc01o.tem, Clearc01p.tem, Clearc01q.tem
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 6D573D
+				MaxColor: 6F593E
+				ZOffset: 12
+				ZRamp: 0
+	Template@ClearGrassyRocky:
+		Categories: Clear
+		Palette: rw_isotem_basic
+		Id: 1034
+		Images: Cleard01.tem, Cleard01a.tem, Cleard01b.tem, Cleard01c.tem, Cleard01d.tem, Cleard01e.tem, Cleard01f.tem
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 6D573D
+				MaxColor: 6F593E
+				ZOffset: 12
+				ZRamp: 0
+	Template@RoughDark:
+		Categories: Rough LAT tile
+		Id: 1035
+		Palette: rw_isotem_basic
+		Images: ruffb01.tem, ruffb01a.tem, ruffb01b.tem, ruffb01c.tem, ruffb01d.tem, ruffb01e.tem, ruffb01f.tem, ruffb01g.tem, ruffb01h.tem, ruffb01i.tem, ruffb01j.tem, ruffb01k.tem, ruffb01l.tem, ruffb01m.tem, ruffb01n.tem, ruffb01o.tem,  ruffb01p.tem, ruffb01q.tem, ruffb01r.tem, ruffb01s.tem, ruffb01t.tem, ruffb01u.tem, ruffb01v.tem, ruffb01w.tem, ruffb01x.tem, ruffb01y.tem, ruffb01z.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 464036
+				MaxColor: 474137
+				ZOffset: 12
+				ZRamp: 0
+	Template@RoughDark151:
+		Categories: Clear/Rough LAT
+		Id: 1036
+		Palette: rw_isotem_basic
+		Images: clatb01.tem, clatb01a.tem, clatb01b.tem, clatb01c.tem, clatb01d.tem, clatb01e.tem, clatb01f.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 534839
+				MaxColor: 544939
+				ZOffset: -12
+				ZRamp: 0
+	Template@RoughDark152:
+		Categories: Clear/Rough LAT
+		Id: 1037
+		Palette: rw_isotem_basic
+		Images: clatb02.tem, clatb02a.tem, clatb02b.tem, clatb02c.tem, clatb02d.tem, clatb02e.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 4A4439
+				MaxColor: 584A38
+				ZOffset: -12
+				ZRamp: 0
+	Template@RoughDark153:
+		Categories: Clear/Rough LAT
+		Id: 1038
+		Palette: rw_isotem_basic
+		Images: clatb03.tem, clatb03a.tem, clatb03b.tem, clatb03c.tem, clatb03d.tem, clatb03e.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 464036
+				MaxColor: 574A39
+				ZOffset: -12
+				ZRamp: 0
+	Template@RoughDark154:
+		Categories: Clear/Rough LAT
+		Id: 1039
+		Palette: rw_isotem_basic
+		Images: clatb04.tem, clatb04a.tem, clatb04b.tem, clatb04c.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 4C463B
+				MaxColor: 5E4F3C
+				ZOffset: -12
+				ZRamp: 0
+	Template@RoughDark155:
+		Categories: Clear/Rough LAT
+		Id: 1040
+		Palette: rw_isotem_basic
+		Images: clatb05.tem, clatb05a.tem, clatb05b.tem, clatb05c.tem, clatb05d.tem, clatb05e.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 554939
+				MaxColor: 494338
+				ZOffset: -12
+				ZRamp: 0
+	Template@RoughDark156:
+		Categories: Clear/Rough LAT
+		Id: 1041
+		Palette: rw_isotem_basic
+		Images: clatb06.tem, clatb06a.tem, clatb06b.tem, clatb06c.tem, clatb06d.tem, clatb06e.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 554938
+				MaxColor: 574A3A
+				ZOffset: -12
+				ZRamp: 0
+	Template@RoughDark157:
+		Categories: Clear/Rough LAT
+		Id: 1042
+		Palette: rw_isotem_basic
+		Images: clatb07.tem, clatb07a.tem, clatb07b.tem, clatb07c.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 584C3C
+				MaxColor: 584A39
+				ZOffset: -12
+				ZRamp: 0
+	Template@RoughDark158:
+		Categories: Clear/Rough LAT
+		Id: 1043
+		Palette: rw_isotem_basic
+		Images: clatb08.tem, clatb08a.tem, clatb08b.tem, clatb08c.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 564B3B
+				MaxColor: 61523F
+				ZOffset: -12
+				ZRamp: 0
+	Template@RoughDark159:
+		Categories: Clear/Rough LAT
+		Id: 1044
+		Palette: rw_isotem_basic
+		Images: clatb09.tem, clatb09a.tem, clatb09b.tem, clatb09c.tem, clatb09d.tem, clatb09e.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 564939
+				MaxColor: 494338
+				ZOffset: -12
+				ZRamp: 0
+	Template@RoughDark160:
+		Categories: Clear/Rough LAT
+		Id: 1045
+		Palette: rw_isotem_basic
+		Images: clatb10.tem, clatb10a.tem, clatb10b.tem, clatb10c.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 544939
+				MaxColor: 564937
+				ZOffset: -12
+				ZRamp: 0
+	Template@RoughDark161:
+		Categories: Clear/Rough LAT
+		Id: 1046
+		Palette: rw_isotem_basic
+		Images: clatb11.tem, clatb11a.tem, clatb11b.tem, clatb11c.tem, clatb11d.tem, clatb11e.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 5A4E3D
+				MaxColor: 5B4C39
+				ZOffset: -12
+				ZRamp: 0
+	Template@RoughDark162:
+		Categories: Clear/Rough LAT
+		Id: 1047
+		Palette: rw_isotem_basic
+		Images: clatb12.tem, clatb12a.tem, clatb12b.tem, clatb12c.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 574C3C
+				MaxColor: 60503D
+				ZOffset: -12
+				ZRamp: 0
+	Template@RoughDark163:
+		Categories: Clear/Rough LAT
+		Id: 1048
+		Palette: rw_isotem_basic
+		Images: clatb13.tem, clatb13a.tem, clatb13b.tem, clatb13c.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 64533D
+				MaxColor: 4A4438
+				ZOffset: -12
+				ZRamp: 0
+	Template@RoughDark164:
+		Categories: Clear/Rough LAT
+		Id: 1049
+		Palette: rw_isotem_basic
+		Images: clatb14.tem, clatb14a.tem, clatb14b.tem, clatb14c.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 67533B
+				MaxColor: 584B3A
+				ZOffset: -12
+				ZRamp: 0
+	Template@RoughDark165:
+		Categories: Clear/Rough LAT
+		Id: 1050
+		Palette: rw_isotem_basic
+		Images: clatb15.tem, clatb15a.tem, clatb15b.tem, clatb15c.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 635440
+				MaxColor: 554939
+				ZOffset: -12
+				ZRamp: 0
+	Template@RoughDark166:
+		Categories: Clear/Rough LAT
+		Id: 1051
+		Palette: rw_isotem_basic
+		Images: clatb16.tem, clatb16a.tem, clatb16b.tem, clatb16c.tem, clatb16d.tem, clatb16e.tem, clatb16f.tem, clatb16g.tem, clatb16h.tem, clatb16i.tem, clatb16j.tem, clatb16k.tem, clatb16l.tem, clatb16m.tem, clatb16n.tem
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 5B4D3A
+				MaxColor: 5D4F3D
 				ZOffset: -12
 				ZRamp: 0

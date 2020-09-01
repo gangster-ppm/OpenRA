@@ -77,6 +77,77 @@ e1.nod:
 	Defaults: e1
 	icon: sidebar-nod|e1icon
 
+e1-nod:
+	Defaults: node1
+		Tick: 80
+		Offset: 0, 0, 16
+	stand:
+		Facings: 8
+		ShadowStart: 506#292
+	run:
+		Start: 8
+		Length: 18
+		Facings: 8
+		ShadowStart: 514#300
+	idle1:
+		Start: 152
+		Length: 18
+		ShadowStart: 658#348
+	idle2:
+		Start: 170
+		Length: 18
+		ShadowStart: 676#363
+	prone-run:
+		Start: 188
+		Length: 12
+		Facings: 8
+		ShadowStart: 694#378
+	prone-stand:
+		Start: 188
+		Facings: 8
+		Stride: 12
+		ShadowStart: 694#378
+	die1:
+		Start: 283
+		Length: 18
+		ShadowStart: 789#426
+	die2:
+		Start: 299
+		Length: 18
+		ShadowStart: 805#441
+	die3: infdie
+		Length: *
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 299
+		Length: 18
+		ShadowStart: 805#451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 315
+		Length: 6
+		Facings: 8
+		ShadowStart: 821#456
+	prone-shoot:
+		Start: 363
+		Length: 6
+		Facings: 8
+		ShadowStart: 869#504
+	standup-0:
+		Start: 412
+		Length: 5
+		Facings: 8
+		ShadowStart: 917#552
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: sidebar-nod|e1icon
+	
 e2:
 	Inherits: ^BasicInfantry
 	Inherits@attack: ^BasicInfantryAttack

@@ -34,6 +34,8 @@ NAPOWR:
 	PowerTooltip:
 	IsometricSelectable:
 		Height: 48
+	RenderSprites:
+		Palette: nodbuild1
 
 NAAPWR:
 	Inherits: ^Building
@@ -216,7 +218,9 @@ NAWEAP:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
 	IsometricSelectable:
-		Height: 48
+		Height: 96
+	RenderSprites:
+		Palette: nodbuild1
 
 NAHPAD:
 	Inherits: ^Building
@@ -522,7 +526,7 @@ NAWAST:
 		Range: 6c0
 		MaxHeightDelta: 3
 	TiberianSunRefinery:
-		DockAngle: 640
+		DockAngle: 160
 		DockOffset: 2,1
 	StoresResources:
 		Capacity: 56
@@ -531,7 +535,7 @@ NAWAST:
 	FreeActor:
 		Actor: WEED
 		SpawnOffset: 3,1
-		Facing: 640
+		Facing: 160
 	WithIdleOverlay@GLOW:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-glow

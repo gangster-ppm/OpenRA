@@ -48,6 +48,13 @@ Packages:
 	~ecache01.mix
 	ts|bits
 	ts|uibits
+	ts|bits/terrain
+	ts|bits/terrain_wip
+	ts|bits/palettes
+	ts|bits/voxels_wip
+	ts|bits/voxels
+	ts|bits/voxels_civilian
+	ts|bits/buildingz
 
 MapFolders:
 	ts|maps: System
@@ -110,11 +117,11 @@ TileSets:
 	ts|tilesets/snow.yaml
 
 MapGrid:
-	TileSize: 48,24
-	EnableDepthBuffer: True
+	TileSize: 96,48
+	EnableDepthBuffer: False
 	Type: RectangularIsometric
 	MaximumTerrainHeight: 16
-	SubCellOffsets: 0,0,0, -362,181,0, 0,-128,0, 362,181,0
+	SubCellOffsets: 0,0,0, -256,128,0, 0,-128,0, 256,128,0
 	DefaultSubCell: 2
 
 Cursors:

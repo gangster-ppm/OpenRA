@@ -1,6 +1,6 @@
 4TNK:
 	Inherits: ^Tank
-	Inherits@VOXELS: ^VoxelActor
+	Inherits@VOXELS: ^VoxelActorRA_Normals
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Valued:
@@ -9,7 +9,7 @@
 		Name: Mammoth Tank
 	Mobile:
 		Speed: 56
-		TurnSpeed: 20
+		TurnSpeed: 5
 	Health:
 		HP: 60000
 	Armor:
@@ -19,7 +19,7 @@
 		MaxHeightDelta: 3
 		RequiresCondition: !inside-tunnel
 	Turreted:
-		TurnSpeed: 12
+		TurnSpeed: 3
 	Armament@PRIMARY:
 		Weapon: 120mmx
 		LocalOffset: 707,85,509, 707,-120,509
@@ -34,11 +34,18 @@
 	ChangesHealth:
 		Step: 500
 		Delay: 10
-		StartIfBelow: 50
+		HealIfBelow: 50
 		DamageCooldown: 200
 	WithVoxelTurret:
 	WithVoxelBarrel:
 	WithMuzzleOverlay:
+	RenderVoxels:
+		Scale: 0.95
+        NormalsPalette: ra2normals
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
 ^TRUCK:
 	Inherits: ^CivilianVoxelVehicle
@@ -57,6 +64,13 @@
 		RequiresCondition: !inside-tunnel
 		Range: 5c0
 		MaxHeightDelta: 3
+    RenderVoxels:
+		Scale: 1.52
+        NormalsPalette: ra2normals
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
 TRUCKA:
 	Inherits: ^TRUCK
@@ -77,7 +91,7 @@ ICBM:
 		Type: Light
 	Mobile:
 		Speed: 85
-		TurnSpeed: 20
+		TurnSpeed: 5
 	RevealsShroud:
 		RequiresCondition: !inside-tunnel
 		Range: 7c0
@@ -85,10 +99,17 @@ ICBM:
 	Transforms:
 		IntoActor: gaicbm
 		Offset: -1,-1
-		Facing: 384
+		Facing: 96
 		TransformSounds:
 		NoTransformSounds:
 		Voice: Move
+    RenderVoxels:
+		Scale: 1.52
+        NormalsPalette: ra2normals
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
 BUS:
 	Inherits: ^CivilianVoxelCrusher
@@ -98,7 +119,7 @@ BUS:
 	Tooltip:
 		Name: School Bus
 	Mobile:
-		TurnSpeed: 20
+		TurnSpeed: 5
 		Speed: 113
 		PauseOnCondition: empdisable || loading || being-captured || carried
 	Health:
@@ -115,6 +136,13 @@ BUS:
 		UnloadVoice: Unload
 		LoadingCondition: loading
 		EjectOnDeath: true
+    RenderVoxels:
+		Scale: 1.1
+        NormalsPalette: ra2normals
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
 PICK:
 	Inherits: ^CivilianVoxelVehicle
@@ -124,7 +152,7 @@ PICK:
 	Tooltip:
 		Name: Pickup
 	Mobile:
-		TurnSpeed: 20
+		TurnSpeed: 5
 		Speed: 113
 		PauseOnCondition: empdisable || loading || being-captured || carried
 	Health:
@@ -141,6 +169,13 @@ PICK:
 		UnloadVoice: Unload
 		LoadingCondition: loading
 		EjectOnDeath: true
+    RenderVoxels:
+		Scale: 1.52
+        NormalsPalette: ra2normals
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
 CAR:
 	Inherits: ^CivilianVoxelVehicle
@@ -150,7 +185,7 @@ CAR:
 	Tooltip:
 		Name: Automobile
 	Mobile:
-		TurnSpeed: 20
+		TurnSpeed: 5
 		Speed: 113
 		PauseOnCondition: empdisable || loading || being-captured || carried
 	Health:
@@ -176,7 +211,7 @@ WINI:
 	Tooltip:
 		Name: Recreational Vehicle
 	Mobile:
-		TurnSpeed: 20
+		TurnSpeed: 5
 		Speed: 113
 		PauseOnCondition: empdisable || loading || being-captured || carried
 	Health:

@@ -1,6 +1,6 @@
 BGGY:
 	Inherits: ^Vehicle
-	Inherits@VOXELS: ^VoxelActor
+	Inherits@VOXELS: ^VoxelActorRA_Normals
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
@@ -15,7 +15,7 @@ BGGY:
 		Prerequisites: ~naweap, ~techlevel.low
 		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
 	Mobile:
-		TurnSpeed: 32
+		TurnSpeed: 8
 		Speed: 142
 	Health:
 		HP: 22000
@@ -37,10 +37,16 @@ BGGY:
 	WithMuzzleOverlay:
 	-DamagedByTerrain@VEINS:
 	-LeavesTrails@VEINS:
+	RenderVoxels:
+		Scale: 1.09
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
 BIKE:
 	Inherits: ^Vehicle
-	Inherits@VOXELS: ^VoxelActor
+	Inherits@VOXELS: ^VoxelActorRA_Normals
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Valued:
@@ -55,7 +61,7 @@ BIKE:
 		Prerequisites: ~naweap, ~techlevel.low
 		Description: Fast scout vehicle, armed with\nrockets.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Mobile:
-		TurnSpeed: 32
+		TurnSpeed: 8
 		Speed: 170
 	Health:
 		HP: 15000
@@ -80,10 +86,17 @@ BIKE:
 		RequiresCondition: !inside-tunnel && !rank-elite
 	LeavesTrails@VEINS:
 		RequiresCondition: !inside-tunnel && !rank-elite
+	RenderVoxels:
+		Scale: 1.09
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
+
 
 TTNK:
 	Inherits: ^Tank
-	Inherits@VOXELS: ^VoxelActor
+	Inherits@VOXELS: ^VoxelActorRA_Normals
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
@@ -102,7 +115,7 @@ TTNK:
 		Prerequisites: ~naweap, ~techlevel.medium
 		Description: Nod's main battle tank.\nCan deploy to gain extra protection.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Mobile:
-		TurnSpeed: 20
+		TurnSpeed: 5
 		Speed: 85
 		ImmovableCondition: !undeployed
 		RequireForceMoveCondition: !undeployed
@@ -137,7 +150,7 @@ TTNK:
 		UndeployedCondition: undeployed
 		UndeployOnMove: true
 		UndeployOnPickup: true
-		Facing: 640
+		Facing: 160
 		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
 		DeploySounds: place2.aud
 		UndeploySounds: clicky1.aud
@@ -159,9 +172,9 @@ TTNK:
 		RequiresCondition: undeployed
 		PauseOnCondition: empdisable
 	Turreted:
-		TurnSpeed: 24
+		TurnSpeed: 6
 		Turret: deployed
-		InitialFacing: 640
+		InitialFacing: 160
 		Offset: -20, -130, 128
 		RealignDelay: -1
 	WithVoxelBarrel:
@@ -204,7 +217,11 @@ TTNK:
 	RevealOnFire:
 		ArmamentNames: primary, deployed
 	RenderVoxels:
-		Scale: 11.5
+		Scale: 1.2
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
 ART2:
 	Inherits: ^Tank
@@ -232,7 +249,7 @@ ART2:
 		Type: Light
 	Mobile:
 		Speed: 71
-		TurnSpeed: 8
+		TurnSpeed: 2
 		ImmovableCondition: !undeployed
 		RequireForceMoveCondition: !undeployed
 	RevealsShroud:
@@ -250,7 +267,7 @@ ART2:
 		UndeployedCondition: undeployed
 		UndeployOnMove: true
 		UndeployOnPickup: true
-		Facing: 384
+		Facing: 96
 		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
 		DeploySounds: place2.aud
 		UndeploySounds: clicky1.aud
@@ -269,8 +286,8 @@ ART2:
 		RequiresCondition: !undeployed && real-actor
 	Turreted:
 		Turret: deployed
-		TurnSpeed: 20
-		InitialFacing: 384
+		TurnSpeed: 5
+		InitialFacing: 96
 		Offset: 0,0,256
 		RealignDelay: -1
 	WithVoxelBarrel:
@@ -301,10 +318,17 @@ ART2:
 	WithMuzzleOverlay:
 	RevealOnFire:
 		ArmamentNames: deployed
+	RenderVoxels:
+		NormalsPalette: ra2normals
+		Scale: 1.2
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
 REPAIR:
 	Inherits: ^Tank
-	Inherits@VOXELS: ^VoxelActor
+	Inherits@VOXELS: ^VoxelActorRA_Normals
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 70
@@ -320,7 +344,7 @@ REPAIR:
 		HP: 20000
 	Mobile:
 		Speed: 85
-		TurnSpeed: 20
+		TurnSpeed: 5
 	RevealsShroud:
 		RequiresCondition: !inside-tunnel
 		Range: 5c0
@@ -339,6 +363,12 @@ REPAIR:
 		InitialStance: AttackAnything
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Vehicle
+	RenderVoxels:
+		Scale: 1.07
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
 WEED:
 	Inherits: ^Tank
@@ -365,13 +395,13 @@ WEED:
 		DeliverVoice: Move
 	Mobile:
 		Speed: 71
-		TurnSpeed: 20
+		TurnSpeed: 5
 	Health:
 		HP: 60000
 	ChangesHealth:
 		Step: 500
 		Delay: 10
-		StartIfBelow: 50
+		HealIfBelow: 50
 		DamageCooldown: 200
 	Armor:
 		Type: Heavy
@@ -390,10 +420,17 @@ WEED:
 		FullSequence: pip-red
 		Palette: pips
 		PipCount: 7
+    RenderVoxels:
+		Scale: 1.52
+        NormalsPalette: ra2normals
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
 SAPC:
 	Inherits: ^Tank
-	Inherits@VOXELS: ^VoxelActor
+	Inherits@VOXELS: ^VoxelActorRA_Normals
 	Inherits@CARGOPIPS: ^CargoPips
 	Valued:
 		Cost: 800
@@ -407,7 +444,7 @@ SAPC:
 		Prerequisites: ~naweap, natech, ~techlevel.medium
 		Description: Troop transport that can move\nunderground to avoid detection.\n  Unarmed
 	Mobile:
-		TurnSpeed: 20
+		TurnSpeed: 5
 		Speed: 71
 		PauseOnCondition: empdisable || loading || being-captured || carried
 		Locomotor: subterranean
@@ -441,6 +478,12 @@ SAPC:
 		RequiresCondition: !submerged
 	WithDecoration@UNDERGROUND:
 		RequiresCondition: inside-tunnel || submerged
+	RenderVoxels:
+		Scale: 1.15
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
 SUBTANK:
 	Inherits: ^Tank
@@ -459,7 +502,7 @@ SUBTANK:
 		Prerequisites: ~naweap, natech, ~techlevel.high
 		Description: Subterranean Flame Tank.\nIs able to move underground.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks, Aircraft
 	Mobile:
-		TurnSpeed: 24
+		TurnSpeed: 6
 		Speed: 71
 		Locomotor: subterranean
 	Health:
@@ -491,6 +534,13 @@ SUBTANK:
 		RequiresCondition: !submerged
 	WithDecoration@UNDERGROUND:
 		RequiresCondition: inside-tunnel || submerged
+    RenderVoxels:
+		Scale: 1.62
+        NormalsPalette: ra2normals
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
 STNK:
 	Inherits: ^Tank
@@ -509,7 +559,7 @@ STNK:
 		Queue: Vehicle
 		Description: Lightly armoured tank equipped with a personal\nstealth generator. Armed with missiles.\nCan be spotted by infantry at close range.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 	Mobile:
-		TurnSpeed: 20
+		TurnSpeed: 5
 		Speed: 85
 	Health:
 		HP: 18000
@@ -545,3 +595,10 @@ STNK:
 	Explodes@ELITE:
 		RequiresCondition: rank-elite
 		Weapon: UnitExplode
+    RenderVoxels:
+		Scale: 1.6
+        NormalsPalette: ra2normals
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0

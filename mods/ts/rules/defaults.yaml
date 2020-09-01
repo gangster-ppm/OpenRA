@@ -54,7 +54,7 @@
 	ChangesHealth@ELITE:
 		Step: 200
 		Delay: 100
-		StartIfBelow: 100
+		HealIfBelow: 100
 		DamageCooldown: 125
 		RequiresCondition: rank-elite
 	WithDecoration@VETERAN:
@@ -594,7 +594,7 @@
 	ChangesHealth@HOSPITAL:
 		Step: 500
 		Delay: 100
-		StartIfBelow: 100
+		HealIfBelow: 100
 		DamageCooldown: 125
 		RequiresCondition: hospitalheal
 	GrantConditionOnPrerequisite@HOSPITAL:
@@ -760,7 +760,7 @@
 	Mobile:
 		PauseOnCondition: empdisable || being-captured || carried
 		Locomotor: wheeled
-		TurnSpeed: 20
+		TurnSpeed: 5
 		Voice: Move
 	Selectable:
 		Bounds: 40,24
@@ -845,6 +845,13 @@
 		QuantizedFacings: 0
 	RenderVoxels:
 	WithVoxelBody:
+    
+^VoxelActorRA_Normals:
+	BodyOrientation:
+		QuantizedFacings: 0
+	RenderVoxels:
+        NormalsPalette: ra2normals
+	WithVoxelBody:
 
 ^CivilianVoxelVehicle:
 	Inherits: ^Vehicle
@@ -875,7 +882,7 @@
 		RepairActors: gadept
 		Voice: Move
 	Aircraft:
-		InitialFacing: 896
+		InitialFacing: 224
 		AirborneCondition: airborne
 		CruisingCondition: cruising
 		CruiseAltitude: 4c704
@@ -951,7 +958,7 @@
 	FallsToEarth:
 		Moves: true
 		Velocity: 112
-		MaximumSpinSpeed: 40
+		MaximumSpinSpeed: 10
 	HitShape:
 
 ^Visceroid:
@@ -965,7 +972,7 @@
 		Type: Light
 	Mobile:
 		Speed: 113
-		TurnSpeed: 64
+		TurnSpeed: 16
 		Locomotor: visceroid
 	Selectable:
 		Bounds: 26,26,0,-3
@@ -1114,7 +1121,7 @@
 	RenderSprites:
 	WithVoxelBody:
 	Mobile:
-		TurnSpeed: 20
+		TurnSpeed: 5
 		Voice: Move
 		Speed: 113
 		PauseOnCondition: empdisable

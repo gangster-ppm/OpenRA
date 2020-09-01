@@ -3,24 +3,97 @@
 		Name: mouse
 		Filename: mousepal.pal
 		CursorPalette: true
+
+	PaletteFromFile@greentib1:
+		Name: greentib
+		Filename: greentib.pal
+		ShadowIndex: 1
+
+	PaletteFromFile@bluetib1:
+		Name: bluetib
+		Filename: bluetib.pal
+		ShadowIndex: 1
+
+	PaletteFromFile@nodbuild1:
+		Name: nodbuild1
+		Filename: nodbuild1.pal
+		ShadowIndex: 1
+
+	PaletteFromFile@remaps1:
+		Name: remaps1
+		Filename: remaps.pal
+		ShadowIndex: 1
+
+	PaletteFromFile@gradient1:
+		Name: gradient1
+		Filename: gradient.pal
+		ShadowIndex: 1
+
+	PaletteFromFile@gradient2:
+		Name: gradient2
+		Filename: gradientgreen.pal
+		ShadowIndex: 1
+        
 	PaletteFromFile@terraintem:
 		Name: terrain
 		Tileset: TEMPERATE
 		Filename: isotem.pal
+    
+	PaletteFromFile@rw_isotem_basic:
+		Name: rw_isotem_basic
+		Tileset: TEMPERATE
+		Filename: rw_isotem_basic.pal
+        ShadowIndex: 1
+
+	PaletteFromFile@rw_tem_water1:
+		Name: rw_tem_water1
+		Tileset: TEMPERATE
+		Filename: rw_tem_water1.pal
+        ShadowIndex: 1
+
+	PaletteFromFile@rw_tem_beach1:
+		Name: rw_tem_beach1
+		Tileset: TEMPERATE
+		Filename: rw_tem_beach1.pal
+        ShadowIndex: 1
+
+    RotationPaletteEffect@rw_tem_shallows_rotation:
+        Palettes: rw_tem_water1
+        RotationBase: 2
+        RotationRange: 6
+        RotationStep: 0.25
+    RotationPaletteEffect@rw_tem_water_rotation:
+        Palettes: rw_tem_water1
+        RotationBase: 8
+        RotationRange: 30
+        RotationStep: 0.25
+	PaletteFromFile@terraintem_beach:
+		Name: terrain_beach
+		Tileset: TEMPERATE
+		Filename: isotem.pal
+
+	PaletteFromFile@terraintem_wasteland:
+		Name: terrain_wasteland
+		Tileset: TEMPERATE
+		Filename: isotem.pal
+    
 	PaletteFromFile@terrainsno:
 		Name: terrain
 		Tileset: SNOW
 		Filename: isosno.pal
+        
 	PaletteFromFile@terraindectem:
 		Name: terraindecoration
 		Tileset: TEMPERATE
 		Filename: isotem.pal
 		ShadowIndex: 1
+        
 	PaletteFromFile@terraindecsno:
 		Name: terraindecoration
 		Tileset: SNOW
 		Filename: isosno.pal
 		ShadowIndex: 1
+        
 	PaletteFromFile@playersno:
 		Name: player
 		Tileset: SNOW
@@ -128,6 +201,9 @@
 	VoxelNormalsPalette@normals:
 		Name: normals
 		Type: TiberianSun
+    VoxelNormalsPalette@ra2normals:
+		Name: ra2normals
+		Type: RedAlert2
 	FixedColorPalette@GreenTiberium:
 		Base: player
 		Name: greentiberium
@@ -141,6 +217,16 @@
 	PlayerColorPalette:
 		BasePalette: player
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+
+	PlayerColorPalette@nod:
+		BaseName: player-nod
+		BasePalette: nodbuild1
+		RemapIndex: 255
+	PlayerColorPalette@remaped:
+		BaseName: player-remaps
+		BasePalette: remaps1
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+
 	PaletteFromPaletteWithAlpha@placebuilding:
 		Name: placefootprint
 		BasePalette: ra

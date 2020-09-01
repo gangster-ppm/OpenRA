@@ -1,0 +1,41 @@
+Hi, folks! Rewire team is looking for a capable voxeler as an addition to our family.
+What to do:
+1. Scale up voxels from YR era and re-fine.
+2. If its easy for you to start from scratch, we don't mind to.
+3. Do a gdi\nod variants from existing voxels.
+
+Pros:
+1. Early access to dev build.
+2. Release your voxels stand-alone if you like
+Cons:
+none
+
+
+COMPLETED:
+Nod Harvester
+Nod Buggy
+Nod Cycle
+Nod Tick Tank
+Nod APC
+Nod Repair Vehicle
+
+GDI APC
+NOT TEXTURED:
+Nod MCV
+GDI DISRUPTOR
+REQURED VARIATION
+Nod Havester - GDI Harvester
+Nod MCV - GDI MCV
+LEGACY VOXEL OKAY QALITY:
+GDI Hover MLRS
+GDI Orca Transport
+Nod Harpy
+Nod Banshee
+GDI DropShip
+GDI Mobile Sensors
+Nod Mobile Stealth
+LEGACY VOXEL POOR QUALITY
+GDI Orca Fighter
+GDI Orca Bomber
+NO VOXEL
+Mobile WF

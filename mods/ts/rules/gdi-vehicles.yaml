@@ -1,6 +1,6 @@
 APC:
 	Inherits: ^Tank
-	Inherits@VOXELS: ^VoxelActor
+	Inherits@VOXELS: ^VoxelActorRA_Normals
 	Inherits@CARGOPIPS: ^CargoPips
 	Valued:
 		Cost: 800
@@ -14,7 +14,7 @@ APC:
 		Prerequisites: ~gaweap, gapile, ~techlevel.medium
 		Description: Armored infantry transport.\nCan move on water.\n  Unarmed
 	Mobile:
-		TurnSpeed: 20
+		TurnSpeed: 5
 		Speed: 113
 		PauseOnCondition: empdisable || loading || being-captured || carried
 		Locomotor: amphibious
@@ -47,10 +47,16 @@ APC:
 		TerrainTypes: Water
 		StationaryInterval: 18
 		MovingInterval: 6
+	RenderVoxels:
+		Scale: 1.31
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.2,-0.2,0,0,0,0
+		LightDiffuseColor: 1,1,0.85,0,0,0
 
 HVR:
 	Inherits: ^Vehicle
-	Inherits@VOXELS: ^VoxelActor
+	Inherits@VOXELS: ^VoxelActorRA_Normals
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Valued:
@@ -68,7 +74,7 @@ HVR:
 		Speed: 99
 		Locomotor: hover
 	Selectable:
-		Bounds: 40,24,0,-10
+		Bounds: 96,48,0,-10
 	Health:
 		HP: 23000
 	Armor:
@@ -81,18 +87,35 @@ HVR:
 		Weapon: HoverMissile
 		LocalOffset: 0,242,543, 0,-242,543
 	Turreted:
-		TurnSpeed: 28
-		Offset: -128,0,85
+		TurnSpeed: 7
+		Offset: -196,0,85
 	AttackTurreted:
 		Voice: Attack
 		PauseOnCondition: empdisable
 	WithVoxelTurret:
-	Hovers:
-		RequiresCondition: !empdisable
+    Hovers@IDLE:
+		RequiresCondition: !empdisable && !hover-crusing && !hover-turn
 		BobDistance: -64
 		InitialHeight: 384
+	Hovers@CRUSING:
+		RequiresCondition: !empdisable && hover-crusing
+		BobDistance: -64
+		InitialHeight: 484
+	Hovers@TURN:
+		RequiresCondition: !empdisable && hover-turn
+		BobDistance: -64
+		InitialHeight: 684
+        Ticks: 6       
 	Carryable:
 		CarriedCondition: carried
+    LeavesTrails@TURN:
+		RequiresCondition: !inside-tunnel && !carried && hover-turn
+		Image: cldrngl1
+		Palette: effect
+		TerrainTypes:
+		TrailWhileStationary: True
+		StationaryInterval: 18
+		MovingInterval: 6
 	LeavesTrails:
 		RequiresCondition: !inside-tunnel && !carried
 		Image: wake
@@ -103,7 +126,19 @@ HVR:
 		MovingInterval: 6
 	-DamagedByTerrain@VEINS:
 	-LeavesTrails@VEINS:
-
+    GrantConditionOnMovement@TURN:
+        Condition: hover-turn
+        ValidMovementTypes: Turn
+    GrantConditionOnMovement@CRUSING:
+        Condition: hover-crusing
+        ValidMovementTypes: Horizontal
+	RenderVoxels:
+		Scale: 1.6
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.2,-0.2,0,0,0,0
+		LightDiffuseColor: 1.2,1.2,1,0,0,0
+    
 SMECH:
 	Inherits: ^Vehicle
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -120,7 +155,7 @@ SMECH:
 		Prerequisites: ~gaweap, ~techlevel.low
 		Description: Anti-personnel walker.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
 	Mobile:
-		TurnSpeed: 20
+		TurnSpeed: 5
 		Speed: 99
 		AlwaysTurnInPlace: true
 	Health:
@@ -152,6 +187,54 @@ SMECH:
 	-DamagedByTerrain@VEINS:
 	-LeavesTrails@VEINS:
 
+MMKII:
+	Inherits: ^Vehicle
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Mummy
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 20
+		Prerequisites: ~gaweap, ~techlevel.low
+		Description: Anti-personnel walker.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+	Mobile:
+		TurnSpeed: 3
+		Speed: 42
+		AlwaysTurnInPlace: true
+	Health:
+		HP: 17500
+	Armor:
+		Type: Light
+	RevealsShroud:
+		RequiresCondition: !inside-tunnel
+		Range: 6c0
+		MaxHeightDelta: 3
+	AttackFrontal:
+		Voice: Attack
+		PauseOnCondition: empdisable
+	Armament:
+		Weapon: AssaultCannon
+	Voiced:
+		VoiceSet: Mech
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithFacingSpriteBody:
+		Sequence: stand
+	WithAttackAnimation:
+		Sequence: shoot
+	WithMoveAnimation:
+		MoveSequence: walk
+		ValidMovementTypes: Horizontal, Turn
+	Selectable:
+		Bounds: 168, 98, 0, -48
+	-DamagedByTerrain@VEINS:
+	-LeavesTrails@VEINS:
+
 MMCH:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -168,7 +251,7 @@ MMCH:
 		Prerequisites: ~gaweap, ~techlevel.medium
 		Description: General purpose mechanized walker.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Mobile:
-		TurnSpeed: 20
+		TurnSpeed: 5
 		Speed: 56
 		AlwaysTurnInPlace: true
 	Health:
@@ -188,7 +271,7 @@ MMCH:
 		MoveSequence: walk
 		ValidMovementTypes: Horizontal, Turn
 	Turreted:
-		TurnSpeed: 20
+		TurnSpeed: 5
 	AttackTurreted:
 		Voice: Attack
 		PauseOnCondition: empdisable
@@ -232,7 +315,7 @@ HMEC:
 		BuildLimit: 1
 		Description: Slow heavy walker.\nArmed with dual railguns and rocket launchers.\n  Strong vs Infantry, Vehicles, Aircraft and Buildings\n  Weak vs Nothing\nMaximum 1 can be built.
 	Mobile:
-		TurnSpeed: 12
+		TurnSpeed: 3
 		Speed: 42
 	Health:
 		HP: 80000
@@ -263,7 +346,7 @@ HMEC:
 
 SONIC:
 	Inherits: ^Tank
-	Inherits@VOXELS: ^VoxelActor
+	Inherits@VOXELS: ^VoxelActorRA_Normals
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Valued:
@@ -280,7 +363,7 @@ SONIC:
 	Targetable:
 		TargetTypes: Ground, Vehicle, Disruptor
 	Mobile:
-		TurnSpeed: 16
+		TurnSpeed: 4
 		Speed: 56
 	Health:
 		HP: 50000
@@ -298,7 +381,7 @@ SONIC:
 		PauseOnCondition: empdisable
 		OpportunityFire: False
 	Turreted:
-		TurnSpeed: 20
+		TurnSpeed: 5
 		Offset: -170,0,0
 	WithVoxelTurret:
 	Explodes:
@@ -306,6 +389,12 @@ SONIC:
 	Explodes@ELITE:
 		RequiresCondition: rank-elite
 		Weapon: UnitExplode
+	RenderVoxels:
+		Scale: 1.32
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.2,-0.2,0,0,0,0
+		LightDiffuseColor: 1,1,0.85,0,0,0
 
 JUGG:
 	Inherits: ^Tank
@@ -333,7 +422,7 @@ JUGG:
 		Type: Light
 	Mobile:
 		Speed: 71
-		TurnSpeed: 20
+		TurnSpeed: 5
 		AlwaysTurnInPlace: true
 		ImmovableCondition: !undeployed
 		RequireForceMoveCondition: !undeployed
@@ -359,7 +448,7 @@ JUGG:
 		UndeployedCondition: undeployed
 		UndeployOnMove: true
 		UndeployOnPickup: true
-		Facing: 384
+		Facing: 96
 		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
 		DeploySounds: place2.aud
 		UndeploySounds: clicky1.aud
@@ -379,8 +468,8 @@ JUGG:
 		Name: deployedbody
 	Turreted:
 		Turret: deployed
-		TurnSpeed: 20
-		InitialFacing: 384
+		TurnSpeed: 5
+		InitialFacing: 96
 		Offset: -153,-17,633
 		RealignDelay: -1
 	WithVoxelBarrel:

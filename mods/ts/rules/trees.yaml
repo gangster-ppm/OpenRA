@@ -1,12 +1,15 @@
 TIBTRE01:
 	Inherits: ^BlossomTree
-
+	RenderSprites:
+		Palette: greentib
 TIBTRE02:
 	Inherits: ^BlossomTree
-
+	RenderSprites:
+		Palette: greentib
 TIBTRE03:
 	Inherits: ^BlossomTree
-
+	RenderSprites:
+		Palette: greentib
 BIGBLUE:
 	Inherits: ^BlossomTree
 	Tooltip:
@@ -99,6 +102,49 @@ TREE24:
 TREE25:
 	Inherits: ^Tree
 
+TREE26:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: rw_isotem_basic
+
+TREE27:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: rw_isotem_basic
+
+TREE28:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: rw_isotem_basic
+TREE29:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: rw_isotem_basic
+TREE30:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: rw_isotem_basic
+TREE31:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: rw_isotem_basic
+TREE32:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: rw_isotem_basic
+TREE33:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: rw_isotem_basic
+TREE34:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: rw_isotem_basic
+TREE35:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: rw_isotem_basic
+
 VEINHOLEDUMMY:
 	HiddenUnderShroud:
 	RadarColorFromTerrain:
@@ -132,13 +178,34 @@ VEINHOLE:
 
 FONA01:
 	Inherits: ^TibFlora
-
+    RenderSprites:
+		Palette: greentib
+	TerrainLightSource:
+		Range: 2c640
+		Intensity: 0.01
+		RedTint: 0.01
+		GreenTint: 0.3
+		BlueTint: 0.01
 FONA02:
 	Inherits: ^TibFlora
-
+    RenderSprites:
+		Palette: greentib
+	TerrainLightSource:
+		Range: 3c640
+		Intensity: 0.01
+		RedTint: 0.01
+		GreenTint: 0.4
+		BlueTint: 0.01
 FONA03:
 	Inherits: ^TibFlora
-
+	RenderSprites:
+		Palette: greentib
+	TerrainLightSource:
+		Range: 3c640
+		Intensity: 0.01
+		RedTint: 0.01
+		GreenTint: 0.3
+		BlueTint: 0.01
 FONA04:
 	Inherits: ^TibFlora
 
@@ -162,15 +229,124 @@ FONA10:
 
 FONA11:
 	Inherits: ^TibFlora
-
+	RenderSprites:
+		Palette: bluetib
+	TerrainLightSource:
+		Range: 2c640
+		Intensity: 0.01
+		RedTint: 0.01
+		GreenTint: 0.01
+		BlueTint: 0.3
 FONA12:
 	Inherits: ^TibFlora
-
+	RenderSprites:
+		Palette: bluetib
+	TerrainLightSource:
+		Range: 3c640
+		Intensity: 0.01
+		RedTint: 0.05
+		GreenTint: 0.01
+		BlueTint: 0.35
 FONA13:
 	Inherits: ^TibFlora
-
+	RenderSprites:
+		Palette: bluetib
+	TerrainLightSource:
+		Range: 4c640
+		Intensity: 0.01
+		RedTint: 0.1
+		GreenTint: 0.01
+		BlueTint: 0.5
 FONA14:
 	Inherits: ^TibFlora
 
 FONA15:
 	Inherits: ^TibFlora
+FONA16:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: bluetib
+	TerrainLightSource:
+		Range: 1c640
+		Intensity: 0.01
+		RedTint: 0.1
+		GreenTint: 0.2
+		BlueTint: 0.2
+FONA17:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: bluetib
+	TerrainLightSource:
+		Range: 2c640
+		Intensity: 0.01
+		RedTint: 0.1
+		GreenTint: 0.2
+		BlueTint: 0.25
+FONA18:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: bluetib
+	TerrainLightSource:
+		Range: 2c640
+		Intensity: 0.01
+		RedTint: 0.1
+		GreenTint: 0.25
+		BlueTint: 0.3
+FONA30:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: bluetib
+FONA31:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: bluetib
+FONA32:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: greentib
+	TerrainLightSource:
+		Range: 2c640
+		Intensity: 0.01
+		RedTint: 0.01
+		GreenTint: 0.3
+		BlueTint: 0.01
+FONA33:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: greentib
+	TerrainLightSource:
+		Range: 3c640
+		Intensity: 0.01
+		RedTint: 0.01
+		GreenTint: 0.3
+		BlueTint: 0.01
+FONA34:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: greentib
+	TerrainLightSource:
+		Range: 2c640
+		Intensity: 0.01
+		RedTint: 0.01
+		GreenTint: 0.3
+		BlueTint: 0.01
+FONA35:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: greentib
+	TerrainLightSource:
+		Range: 1c640
+		Intensity: 0.01
+		RedTint: 0.01
+		GreenTint: 0.2
+		BlueTint: 0.01
+FONA36:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: greentib
+	TerrainLightSource:
+		Range: 1c640
+		Intensity: 0.01
+		RedTint: 0.01
+		GreenTint: 0.1
+		BlueTint: 0.01

@@ -380,23 +380,27 @@ nahand:
 
 naweap:
 	Defaults:
-		Offset: -12, -42, 30
-		DepthSpriteOffset: 24, 0
+		Offset: -29, -58
 		UseTilesetCode: true
 		DepthSprite: isodepth.shp
 	idle: ntweap_1
-		ShadowStart: 2
+		ShadowStart: 4
 		ZOffset: -1024
-		Offset: -12, -42, 1
-		ZRamp: 1
-		-DepthSprite:
 	damaged-idle: ntweap_1
 		Start: 1
-		ShadowStart: 3
+		ShadowStart: 5
 		ZOffset: -1024
-		Offset: -12, -42, 1
-		ZRamp: 1
-		-DepthSprite:
+	idle-remaps: ntweap_rmp
+		ShadowStart: 4
+		ZOffset: 1024
+	damaged-remaps: ntweap_rmp
+		Start: 1
+		ShadowStart: 5
+		ZOffset: 1024
+	dead-remaps: ntweap_rmp
+		Start: 2
+		ShadowStart: 5
+		ZOffset: 1024
 	idle-roof: ntweap_2
 		ShadowStart: 2
 		ZOffset: 512
@@ -408,6 +412,26 @@ naweap:
 		Start: 2
 		ShadowStart: 5
 		Tick: 400
+	idle-smoke: ntweap_c
+		Length: 32
+		Tick: 100
+		ShadowStart: 32
+		ZOffset: 4048
+		BlendMode: Alpha
+	damaged-smoke: ntweap_c
+		Start: 32
+		Length: 32
+		Tick: 100
+		ShadowStart: 32
+		ZOffset: 4048
+		BlendMode: Alpha
+	dead-smoke: ntweap_c
+		Start: 32
+		Length: 16
+		Tick: 100
+		ShadowStart: 32
+		ZOffset: 4048
+		BlendMode: Alpha
 	idle-lights: ntweap_a
 		Length: 16
 		Tick: 100
@@ -417,6 +441,17 @@ naweap:
 		Length: 16
 		Tick: 100
 		ZOffset: 2048
+	idle-lights2: ntweap_a_g
+		Length: 16
+		Tick: 100
+		ZOffset: 3048
+		BlendMode: Additive
+	damaged-idle-lights2: ntweap_a_g
+		Start: 16
+		Length: 16
+		Tick: 100
+		ZOffset: 3048
+		BlendMode: Additive
 	build-door: ntweap_b
 		Length: 10
 		ShadowStart: 10
@@ -427,39 +462,26 @@ naweap:
 		ShadowStart: 20
 		ZOffset: 512
 	make: ntweapmk
-		Length: 22
+		Length: 20
 		Tick: 80
-		ShadowStart: 22
-		Offset: -12, -42, 43
-		DepthSpriteOffset: -12, 0
+		ShadowStart: 0
 	bib: ntweapbb
 		ZOffset: -1024
-		Offset: -12, -42, 1
-		ZRamp: 1
-		-DepthSprite:
 	damaged-bib: ntweapbb
 		Start: 1
 		ZOffset: -1024
-		Offset: -12, -42, 1
-		ZRamp: 1
-		-DepthSprite:
 	dead-bib: ntweapbb
 		Start: 2
 		ZOffset: -1024
-		Offset: -12, -42, 1
-		ZRamp: 1
-		-DepthSprite:
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0, 31
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
-		-DepthSprite:
 	icon: nwepicon
 		Offset: 0, 0
 		UseTilesetCode: false
-		-DepthSprite:
 
 naradr:
 	Defaults:

@@ -1,7 +1,7 @@
 ^tibtree:
 	Defaults:
 		UseTilesetExtension: true
-		Offset: 0, -12, 12
+		Offset: 0, -12, 24
 	idle:
 		ShadowStart: 11
 	active:
@@ -12,12 +12,33 @@
 
 tibtre01:
 	Inherits: ^tibtree
+	idle:
+		ShadowStart: 22
+	active:
+		Start: 1
+		Length: 21
+		ShadowStart: 23
+		Tick: 80
 
 tibtre02:
 	Inherits: ^tibtree
+	idle:
+		ShadowStart: 22
+	active:
+		Start: 1
+		Length: 21
+		ShadowStart: 23
+		Tick: 80
 
 tibtre03:
 	Inherits: ^tibtree
+	idle:
+		ShadowStart: 22
+	active:
+		Start: 1
+		Length: 21
+		ShadowStart: 23
+		Tick: 80
 
 bigblue:
 	Defaults:
@@ -32,7 +53,7 @@ bigblue:
 
 bigblue3:
 	Defaults: bigblue3.tem
-		Offset: 0, -12, 12
+		Offset: 0, -12, 24
 		AddExtension: false
 	idle:
 		ShadowStart: 10
@@ -46,7 +67,7 @@ bigblue3:
 	idle:
 		ShadowStart: 1
 		UseTilesetExtension: true
-		Offset: 0, -12, 12
+		Offset: 0, -12, 24
 
 tree01:
 	Inherits: ^tree
@@ -123,6 +144,36 @@ tree24:
 tree25:
 	Inherits: ^tree
 
+tree26:
+	Inherits: ^tree
+
+tree27:
+	Inherits: ^tree
+
+tree28:
+	Inherits: ^tree
+
+tree29:
+	Inherits: ^tree
+
+tree30:
+	Inherits: ^tree
+
+tree31:
+	Inherits: ^tree
+
+tree32:
+	Inherits: ^tree
+
+tree33:
+	Inherits: ^tree
+
+tree34:
+	Inherits: ^tree
+
+tree35:
+	Inherits: ^tree
+
 ^fona:
 	Inherits: ^tree
 	idle:
@@ -188,6 +239,82 @@ fona15:
 	Inherits: ^fona
 	Defaults: fona15.tem
 
+fona16:
+	Inherits: ^fona
+	Defaults: fona16.tem
+	idle:
+		ShadowStart: 1
+		UseTilesetExtension: true
+		Offset: 0, -12
+
+fona17:
+	Inherits: ^fona
+	Defaults: fona17.tem
+	idle:
+		ShadowStart: 1
+		UseTilesetExtension: true
+		Offset: 0, -12
+	
+fona18:
+	Inherits: ^fona
+	Defaults: fona18.tem
+	idle:
+		ShadowStart: 1
+		UseTilesetExtension: true
+		Offset: 0, -12
+
+fona30:
+	Inherits: ^fona
+	Defaults: fona30.tem
+	idle:
+		ShadowStart: 1
+		UseTilesetExtension: true
+		Offset: 0, -12
+
+fona31:
+	Inherits: ^fona
+	Defaults: fona31.tem
+	idle:
+		ShadowStart: 1
+		UseTilesetExtension: true
+		Offset: 0, -12	
+
+fona32:
+	Inherits: ^fona
+	Defaults: fona32.tem
+	idle:
+		ShadowStart: 1
+		UseTilesetExtension: true
+		Offset: 0, -12	
+fona33:
+	Inherits: ^fona
+	Defaults: fona33.tem
+	idle:
+		ShadowStart: 1
+		UseTilesetExtension: true
+		Offset: 0, -12	
+fona34:
+	Inherits: ^fona
+	Defaults: fona34.tem
+	idle:
+		ShadowStart: 1
+		UseTilesetExtension: true
+		Offset: 0, -12	
+fona35:
+	Inherits: ^fona
+	Defaults: fona35.tem
+	idle:
+		ShadowStart: 1
+		UseTilesetExtension: true
+		Offset: 0, -12	
+fona36:
+	Inherits: ^fona
+	Defaults: fona36.tem
+	idle:
+		ShadowStart: 1
+		UseTilesetExtension: true
+		Offset: 0, -12 
+        
 veinhole:
 	idle:
 		ShadowStart: 1

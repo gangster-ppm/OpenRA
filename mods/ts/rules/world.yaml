@@ -202,10 +202,10 @@
 		Type: Tiberium
 		Name: Tiberium
 		ResourceType: 1
-		Palette: greentiberium
-		Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12
-		MaxDensity: 12
-		ValuePerUnit: 25
+		Palette: greentib
+		Sequences: gtib01, gtib02, gtib03, gtib04, gtib05, gtib06, gtib07, gtib08, gtib09, gtib10
+		MaxDensity: 8
+		ValuePerUnit: 50
 		AllowedTerrainTypes: Clear, Rough, DirtRoad
 		AllowUnderActors: true
 		TerrainType: Tiberium
@@ -213,10 +213,10 @@
 		Type: BlueTiberium
 		Name: Tiberium
 		ResourceType: 2
-		Palette: bluetiberium
-		Sequences: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12
-		MaxDensity: 12
-		ValuePerUnit: 40
+		Palette: bluetib
+		Sequences: btib01, btib02, btib03, btib04, btib05, btib06, btib07, btib08, btib09, btib10
+		MaxDensity: 8
+		ValuePerUnit: 100
 		AllowedTerrainTypes: Clear, Rough, DirtRoad
 		AllowUnderActors: true
 		TerrainType: BlueTiberium
@@ -237,8 +237,6 @@
 	CliffBackImpassabilityLayer:
 	SubterraneanActorLayer:
 	JumpjetActorLayer:
-	ResourceRenderer:
-		RenderTypes: Tiberium, BlueTiberium, Veins
 
 World:
 	Inherits: ^BaseWorld
@@ -279,6 +277,8 @@ World:
 		SmokeType: largesmoke
 		Sequence: largecraters
 	ResourceLayer:
+	ResourceRenderer:
+		RenderTypes: Tiberium, BlueTiberium, Veins
 	BridgeLayer:
 	CustomTerrainDebugOverlay:
 	ResourceClaimLayer:

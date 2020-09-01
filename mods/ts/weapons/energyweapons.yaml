@@ -117,7 +117,7 @@ CyCannon:
 	Projectile: Missile
 		MaximumLaunchSpeed: 192
 		Blockable: false
-		HorizontalRateOfTurn: 8
+		HorizontalRateOfTurn: 2
 		Shadow: true
 		Image: TORPEDO
 		MinimumLaunchSpeed: 75

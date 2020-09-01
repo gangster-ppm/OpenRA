@@ -152,6 +152,29 @@ stnk:
 	Inherits: ^VehicleOverlays
 	icon: stnkicon
 
+mmkii:
+	Inherits: ^VehicleOverlays
+	stand:
+		Start: 0
+		Facings: -32
+		Offset: 48,-48,96
+		ShadowStart: 768
+	walk:
+		Start: 32
+		Facings: -32
+		Length: 20
+		Tick: 48
+		Offset: 48,-48,96
+		ShadowStart: 800
+	shoot:
+		Start: 672
+		Length: 3
+		Facings: -32
+		Tick: 80
+		Offset: 48,-48,96
+		ShadowStart: 1440
+	icon: hmecicon
+
 mmch:
 	Inherits: ^VehicleOverlays
 	stand:

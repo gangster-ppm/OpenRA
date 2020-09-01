@@ -340,31 +340,50 @@ wake:
 resources:
 	Defaults:
 		UseTilesetExtension: true
-		Length: 12
-		ShadowStart: 12
-		Offset: 0, -12, 1.5
+		Length: 8
+		Offset: 0, -24, 16
 		ZRamp: 1
-		IgnoreWorldTint: true
-	tib01: tib01
-	tib02: tib02
-	tib03: tib03
-	tib04: tib04
-	tib05: tib05
-	tib06: tib06
-	tib07: tib07
-	tib08: tib08
-	tib09: tib09
-	tib10: tib10
-	tib11: tib11
-	tib12: tib12
-	tib13: tib13 # TODO: NW ramp variant, currently unused
-	tib14: tib14 # TODO: NW ramp variant, currently unused
-	tib15: tib15 # TODO: NE ramp variant, currently unused
-	tib16: tib16 # TODO: NE ramp variant, currently unused
-	tib17: tib17 # TODO: SE ramp variant, currently unused
-	tib18: tib18 # TODO: SE ramp variant, currently unused
-	tib19: tib19 # TODO: SW ramp variant, currently unused
-	tib20: tib20 # TODO: SW ramp variant, currently unused
+		#IgnoreWorldTint: true
+	gtib01: gtib01
+		Length: 8
+	gtib02: gtib02
+		Length: 8
+	gtib03: gtib03
+		Length: 8
+	gtib04: gtib04
+		Length: 8
+	gtib05: gtib05
+		Length: 8
+	gtib06: gtib06
+		Length: 8
+	gtib07: gtib07
+		Length: 8
+	gtib08: gtib08
+		Length: 8
+	gtib09: gtib09
+		Length: 8
+	gtib10: gtib10
+		Length: 8
+	btib01: btib01
+		Length: 8
+	btib02: btib02
+		Length: 8
+	btib03: btib03
+		Length: 8
+	btib04: btib04
+		Length: 8
+	btib05: btib05
+		Length: 8
+	btib06: btib06
+		Length: 8
+	btib07: btib07
+		Length: 8
+	btib08: btib08
+		Length: 8
+	btib09: btib09
+		Length: 8
+	btib10: btib10
+		Length: 8
 	veins: veins
 		Length: 1
 		Start: 52
@@ -675,3 +694,49 @@ podring:
 	idle:
 		Frames: 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
 		Length: *
+        
+cldrngmd:
+	idle:
+		Length: *
+        Tick: 60
+		ZOffset: -512
+		ZRamp: 1
+		Offset: 0, 0, 1
+		BlendMode: Translucent
+
+cldrngsm:
+	idle:
+		Length: *
+        Tick: 60
+		ZOffset: -512
+		ZRamp: 1
+		Offset: 0, 0, 1
+		BlendMode: Translucent
+
+cldrngl1:
+	idle:
+		Length: *
+        Tick: 60
+		ZOffset: -512
+		ZRamp: 1
+		Offset: 0, 0, 1
+		BlendMode: Translucent
+
+cldrngl2:
+	idle:
+		Length: *
+        Tick: 60
+		ZOffset: -512
+		ZRamp: 1
+		Offset: 0, 0, 1
+		BlendMode: Translucent
+        
+cldrngl3:
+	idle: cldrngl1
+		Length: *
+        Frames: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+        Tick: 30
+		ZOffset: -512
+		ZRamp: 1
+		Offset: 0, 0, 1
+		BlendMode: Translucent
