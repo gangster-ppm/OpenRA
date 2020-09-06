@@ -170,6 +170,158 @@ HARV:
 		LightAmbientColor: -0.21,-0.21,0,0,0,0
 		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
+HARVNOD:
+	Inherits: ^Tank
+	Inherits@VOXELS: ^VoxelActorRA_Normals
+	Inherits@selection: ^SelectableEconomicUnit
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Harvester
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Prerequisites: ~factory, narefn, ~techlevel.low
+		Description: Collects Tiberium for processing.\n  Unarmed
+	Selectable:
+		Bounds: 36,36
+		DecorationBounds: 36,36
+	Harvester:
+		DeliveryBuildings: proc, narefn, garefn
+		Capacity: 28
+		Resources: Tiberium, BlueTiberium
+		BaleLoadDelay: 15
+		BaleUnloadDelay: 15
+		FullyLoadedSpeed: 100
+		SearchFromProcRadius: 36
+		SearchFromHarvesterRadius: 18
+		HarvestVoice: Attack
+		DeliverVoice: Move
+		EmptyCondition: no-tiberium
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 100000
+	ChangesHealth:
+		Step: 500
+		Delay: 10
+		HealIfBelow: 50
+		DamageCooldown: 200
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		RequiresCondition: !inside-tunnel
+		Range: 4c0
+		MaxHeightDelta: 3
+	-WithVoxelBody:
+	WithVoxelUnloadBody:
+	Explodes:
+		RequiresCondition: !no-tiberium
+		Weapon: TiberiumExplosion
+	WithHarvestOverlay:
+		LocalOffset: 543,0,0
+		Palette: effect
+	RenderSprites:
+		Image: harv.nod
+		FactionImages:
+			gdi: harv.nod
+			nod: harv.nod
+	-DamagedByTerrain@VEINS:
+	-LeavesTrails@VEINS:
+	WithHarvesterPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		Margin: 5, 2
+		PipCount: 7
+		Palette: pips
+		ResourceSequences:
+			Tiberium: pip-green
+			BlueTiberium: pip-blue
+	WithDecoration@UNDERGROUND:
+		Sequence: harvester
+	RenderVoxels:
+		Scale: 1.23
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
+
+HARVGDI:
+	Inherits: ^Tank
+	Inherits@VOXELS: ^VoxelActorRA_Normals
+	Inherits@selection: ^SelectableEconomicUnit
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Harvester
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Prerequisites: ~factory, garefn, ~techlevel.low
+		Description: Collects Tiberium for processing.\n  Unarmed
+	Selectable:
+		Bounds: 36,36
+		DecorationBounds: 36,36
+	Harvester:
+		DeliveryBuildings: proc, narefn, garefn
+		Capacity: 28
+		Resources: Tiberium, BlueTiberium
+		BaleLoadDelay: 15
+		BaleUnloadDelay: 15
+		FullyLoadedSpeed: 100
+		SearchFromProcRadius: 36
+		SearchFromHarvesterRadius: 18
+		HarvestVoice: Attack
+		DeliverVoice: Move
+		EmptyCondition: no-tiberium
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 100000
+	ChangesHealth:
+		Step: 500
+		Delay: 10
+		HealIfBelow: 50
+		DamageCooldown: 200
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		RequiresCondition: !inside-tunnel
+		Range: 4c0
+		MaxHeightDelta: 3
+	-WithVoxelBody:
+	WithVoxelUnloadBody:
+	Explodes:
+		RequiresCondition: !no-tiberium
+		Weapon: TiberiumExplosion
+	WithHarvestOverlay:
+		LocalOffset: 543,0,0
+		Palette: effect
+	RenderSprites:
+		Image: harv.gdi
+		FactionImages:
+			gdi: harv.gdi
+			nod: harv.gdi
+	-DamagedByTerrain@VEINS:
+	-LeavesTrails@VEINS:
+	WithHarvesterPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		Margin: 5, 2
+		PipCount: 7
+		Palette: pips
+		ResourceSequences:
+			Tiberium: pip-green
+			BlueTiberium: pip-blue
+	WithDecoration@UNDERGROUND:
+		Sequence: harvester
+	RenderVoxels:
+		Scale: 1.23
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
+
 LPST:
 	Inherits: ^Tank
 	Inherits@VOXELS: ^VoxelActorRA_Normals

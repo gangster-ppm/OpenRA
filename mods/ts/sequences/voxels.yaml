@@ -8,6 +8,17 @@ harv:
 	idle:
 	unload: horv
 
+harvgdi:
+	idle:
+	unload: horvgdi
+
+harvnod:
+	idle:
+	unload: horvnod
+
+hurvgdi:
+	idle:
+
 apc:
 	idle:
 	water: apcw
@@ -122,6 +133,24 @@ cargocar:
 sonic:
 	idle:
 	turret: sonictur
+
+tdbggy:
+	idle:	
+
+tdbike:
+	idle:
+
+tdboat:
+	idle:
+	
+fgtnbus:
+	idle:	
+	
+mmch2:
+	idle:
+
+hurv:
+	idle:
 
 #truk: # TODO: unused
 #	idle:

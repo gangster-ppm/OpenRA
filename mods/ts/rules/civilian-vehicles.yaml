@@ -41,7 +41,7 @@
 	WithMuzzleOverlay:
 	RenderVoxels:
 		Scale: 0.95
-        NormalsPalette: ra2normals
+		NormalsPalette: ra2normals
 		LightPitch: 145
 		LightYaw: 860
 		LightAmbientColor: -0.21,-0.21,0,0,0,0
@@ -64,9 +64,9 @@
 		RequiresCondition: !inside-tunnel
 		Range: 5c0
 		MaxHeightDelta: 3
-    RenderVoxels:
+	RenderVoxels:
 		Scale: 1.52
-        NormalsPalette: ra2normals
+		NormalsPalette: ra2normals
 		LightPitch: 145
 		LightYaw: 860
 		LightAmbientColor: -0.21,-0.21,0,0,0,0
@@ -103,9 +103,9 @@ ICBM:
 		TransformSounds:
 		NoTransformSounds:
 		Voice: Move
-    RenderVoxels:
+	RenderVoxels:
 		Scale: 1.52
-        NormalsPalette: ra2normals
+		NormalsPalette: ra2normals
 		LightPitch: 145
 		LightYaw: 860
 		LightAmbientColor: -0.21,-0.21,0,0,0,0
@@ -136,9 +136,9 @@ BUS:
 		UnloadVoice: Unload
 		LoadingCondition: loading
 		EjectOnDeath: true
-    RenderVoxels:
+	RenderVoxels:
 		Scale: 1.1
-        NormalsPalette: ra2normals
+		NormalsPalette: ra2normals
 		LightPitch: 145
 		LightYaw: 860
 		LightAmbientColor: -0.21,-0.21,0,0,0,0
@@ -169,9 +169,9 @@ PICK:
 		UnloadVoice: Unload
 		LoadingCondition: loading
 		EjectOnDeath: true
-    RenderVoxels:
+	RenderVoxels:
 		Scale: 1.52
-        NormalsPalette: ra2normals
+		NormalsPalette: ra2normals
 		LightPitch: 145
 		LightYaw: 860
 		LightAmbientColor: -0.21,-0.21,0,0,0,0
@@ -261,3 +261,208 @@ CARGOCAR:
 	Cargo:
 		MaxWeight: 10
 		EjectOnDeath: true
+
+
+TDBGGY:
+	Inherits: ^CivilianVoxelVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Attack Buggy
+	Mobile:
+		ROT: 5
+		Speed: 113
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	Cargo:
+		Types: Infantry
+		MaxWeight: 4
+		PipCount: 5
+		UnloadVoice: Unload
+		LoadingUpgrades: notmobile
+	RenderVoxels:
+		Scale: 1.17
+		NormalsPalette: ra2normals
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
+
+TDBIKE:
+	Inherits: ^CivilianVoxelVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Recon Bike
+	Mobile:
+		ROT: 5
+		Speed: 113
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	Cargo:
+		Types: Infantry
+		MaxWeight: 4
+		PipCount: 5
+		UnloadVoice: Unload
+		LoadingUpgrades: notmobile
+	RenderVoxels:
+		Scale: 1.17
+		NormalsPalette: ra2normals
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
+
+TDBOAT:
+	Inherits: ^CivilianVoxelVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Old gunboat
+	Mobile:
+		ROT: 5
+		Speed: 113
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	Cargo:
+		Types: Infantry
+		MaxWeight: 4
+		PipCount: 5
+		UnloadVoice: Unload
+		LoadingUpgrades: notmobile
+	RenderVoxels:
+		Scale: 1.2
+		NormalsPalette: ra2normals
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
+		
+FGTNBUS:
+	Inherits: ^CivilianVoxelVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Battle Bus
+		Description: Forgotten tank destroyer/infantry transport.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 60
+		Prerequisites: ~gaweap
+	Mobile:
+		ROT: 5
+		Speed: 113
+	Health:
+		HP: 250
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	AttackFrontal:
+		Voice: Attack
+	Armament:
+		Weapon: 120mm
+		LocalOffset: 276,0,510
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
+	AutoTarget:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+		UnloadVoice: Unload
+		LoadingUpgrades: notmobile
+	RenderVoxels:
+		Scale: 1.15
+		NormalsPalette: ra2normals
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
+
+MMCH2:
+	Inherits: ^CivilianVoxelVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Titan WIP
+	Mobile:
+		ROT: 5
+		Speed: 113
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	Cargo:
+		Types: Infantry
+		MaxWeight: 20
+		PipCount: 5
+		UnloadVoice: Unload
+		LoadingUpgrades: notmobile
+	RenderVoxels:
+		Scale: 1.15
+		NormalsPalette: ra2normals
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
+
+HURV:
+	Inherits: ^CivilianVoxelVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Harvester Back
+	Mobile:
+		ROT: 5
+		Speed: 113
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	RenderVoxels:
+		Scale: 1.2
+		NormalsPalette: ra2normals
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
+
+HURVGDI:
+	Inherits: ^CivilianVoxelVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Harvester Back
+	Mobile:
+		ROT: 5
+		Speed: 113
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	RenderVoxels:
+		Scale: 13.2
+		NormalsPalette: ra2normals
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
