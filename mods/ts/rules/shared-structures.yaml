@@ -118,7 +118,7 @@ NACNST:
 		PauseOnCondition: empdisable || being-demolished || build-incomplete
 		IntoActor: mcv
 		Offset: 1,1
-		Facing: 384
+		Facing: 385
 		DeployCursor: undeploy
 	TransformsIntoMobile:
 		RequiresCondition: factundeploy
