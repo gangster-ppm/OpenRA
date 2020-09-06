@@ -54,7 +54,8 @@ Packages:
 	ts|bits/voxels_wip
 	ts|bits/voxels
 	ts|bits/voxels_civilian
-	ts|bits/buildingz
+	ts|bits/buildings_wip
+	ts|bits/buildings
 
 MapFolders:
 	ts|maps: System

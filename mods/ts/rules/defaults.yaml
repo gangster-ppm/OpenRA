@@ -760,7 +760,7 @@
 	Mobile:
 		PauseOnCondition: empdisable || being-captured || carried
 		Locomotor: wheeled
-		TurnSpeed: 5
+		TurnSpeed: 20
 		Voice: Move
 	Selectable:
 		Bounds: 40,24

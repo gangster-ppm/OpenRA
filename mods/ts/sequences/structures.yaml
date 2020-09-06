@@ -53,6 +53,183 @@ gacnst:
 		UseTilesetCode: false
 		-DepthSprite:
 
+nacnst:
+	Defaults:
+		Offset: 0, -36, 36
+		UseTilesetCode: true
+		DepthSprite: isodepth.shp
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	make: ntcnstmk
+		Length: 24
+		ShadowStart: 24
+	crane-overlay: ntcnst_d
+		Length: 20
+		ZOffset: 1023
+	damaged-crane-overlay: ntcnst_d
+		Length: 20
+		ZOffset: 1023
+	critical-crane-overlay: ntcnst_d
+		Start: 20
+		Length: 20
+		ZOffset: 1023
+	idle-top: ntcnst_c
+		Length: 15
+		Tick: 80
+	damaged-idle-top: ntcnst_c
+		Start: 15
+		Length: 15
+		Tick: 80
+	idle-side: ntcnst_a
+		Length: 10
+	damaged-idle-side: ntcnst_a
+		Start: 10
+		Length: 10
+	idle-front: ntcnst_b
+		Length: 10
+	damaged-idle-front: ntcnst_b
+		Length: 10
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0, 37
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+		-DepthSprite:
+	icon: facticon
+		Offset: 0,0
+		UseTilesetCode: false
+		-DepthSprite:
+
+garefn:
+	Defaults: gtrefn
+		Offset: -12, -42, 20
+		DepthSpriteOffset: 22, 0
+		UseTilesetCode: true
+		DepthSprite: isodepth.shp
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	make: gtrefnmk
+		Length: 20
+		ShadowStart: 20
+		Offset: -12, -42, 43
+		DepthSpriteOffset: -12, 0
+	flame: gtrefn_b
+		Length: *
+	unload-overlay: garefn_a
+		Length: *
+		ZOffset: 1024
+	idle-redlights: gtrefn_c
+		Length: 16
+		Tick: 120
+	damaged-idle-redlights: gtrefn_c
+		Length: 16
+		Tick: 120
+	bib: gtrefnbb
+		Length: 1
+		ZOffset: -1024
+		Offset: -12, -42, 5
+		ZRamp: 1
+		-DepthSprite:
+	damaged-bib: gtrefnbb
+		Start: 1
+		ZOffset: -1024
+		Offset: -12, -42, 5
+		ZRamp: 1
+		-DepthSprite:
+	dead-bib: gtrefnbb
+		Start: 2
+		ZOffset: -1024
+		Offset: -12, -42, 5
+		ZRamp: 1
+		-DepthSprite:
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0, 21
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+		-DepthSprite:
+	icon: sidebar-gdi|reficon
+		Offset: 0, 0
+		UseTilesetCode: false
+		-DepthSprite:
+
+narefn:
+	Defaults: ntrefn
+		Offset: -12, -42, 20
+		DepthSpriteOffset: 22, 0
+		UseTilesetCode: true
+		DepthSprite: isodepth.shp
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	make: ntrefnmk
+		Length: 20
+		ShadowStart: 20
+		Offset: -12, -42, 43
+		DepthSpriteOffset: -12, 0
+	flame: ntrefn_b
+		Length: *
+	unload-overlay: narefn_a
+		Length: *
+		ZOffset: 1024
+	idle-redlights: ntrefn_c
+		Length: 16
+		Tick: 120
+	damaged-idle-redlights: ntrefn_c
+		Length: 16
+		Tick: 120
+	bib: ntrefnbb
+		Length: 1
+		ZOffset: -1024
+		Offset: -12, -42, 5
+		ZRamp: 1
+		-DepthSprite:
+	damaged-bib: ntrefnbb
+		Start: 1
+		ZOffset: -1024
+		Offset: -12, -42, 5
+		ZRamp: 1
+		-DepthSprite:
+	dead-bib: ntrefnbb
+		Start: 2
+		ZOffset: -1024
+		Offset: -12, -42, 5
+		ZRamp: 1
+		-DepthSprite:
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0, 21
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+		-DepthSprite:
+	icon: sidebar-nod|reficon
+		Offset: 0, 0
+		UseTilesetCode: false
+		-DepthSprite:
+
 gapowr:
 	Defaults:
 		Offset: 0, -24, 24
@@ -380,16 +557,21 @@ nahand:
 
 naweap:
 	Defaults:
-		Offset: -29, -58
+		Offset: -29, -58, 64
 		UseTilesetCode: true
-		DepthSprite: isodepth.shp
+		DepthSprite: z_ntweap.shp
+		DepthSpriteOffset: 15, 21
 	idle: ntweap_1
 		ShadowStart: 4
 		ZOffset: -1024
+		#Offset: -29, -58, 80
+		#DepthSprite: z_ntweap_1.shp
+		#DepthSpriteOffset: 76, 1
 	damaged-idle: ntweap_1
 		Start: 1
 		ShadowStart: 5
 		ZOffset: -1024
+		#DepthSprite: z_ntweap_1.shp
 	idle-remaps: ntweap_rmp
 		ShadowStart: 4
 		ZOffset: 1024
@@ -404,10 +586,13 @@ naweap:
 	idle-roof: ntweap_2
 		ShadowStart: 2
 		ZOffset: 512
+		#DepthSprite: z_ntweap_2.shp
+		#DepthSpriteOffset: 50, 25
 	damaged-idle-roof: ntweap_2
 		Start: 1
 		ShadowStart: 3
 		ZOffset: 512
+		#DepthSprite: z_ntweap_2.shp
 	dead: ntweap
 		Start: 2
 		ShadowStart: 5
@@ -453,10 +638,14 @@ naweap:
 		ZOffset: 3048
 		BlendMode: Additive
 	build-door: ntweap_b
+		Offset: -29, -58, 120
+		DepthSprite: z_ntweap_b.shp
+		DepthSpriteOffset: 70, 10
 		Length: 10
 		ShadowStart: 10
 		ZOffset: 512
 	damaged-build-door: ntweap_b
+		#DepthSprite: z_ntweap_b.shp
 		Start: 10
 		Length: 10
 		ShadowStart: 20
@@ -466,8 +655,12 @@ naweap:
 		Tick: 80
 		ShadowStart: 0
 	bib: ntweapbb
+		#DepthSprite: z_ntweap_bib.shp
+		#DepthSpriteOffset: 150, 15
+		Offset: -29, -58, 180
 		ZOffset: -1024
 	damaged-bib: ntweapbb
+		#DepthSprite: z_ntweap_bib.shp
 		Start: 1
 		ZOffset: -1024
 	dead-bib: ntweapbb

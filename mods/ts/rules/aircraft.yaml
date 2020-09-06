@@ -192,7 +192,7 @@ ORCA:
 		EmptySequence: pip-ammoempty
 		Palette: pips
 	RenderVoxels:
-		Scale: 12.5
+		Scale: 13.1
 		NormalsPalette: ra2normals
 		LightPitch: 145
 		LightYaw: 860
@@ -265,12 +265,12 @@ ORCAB:
 		EmptySequence: pip-ammoempty
 		Palette: pips
 	RenderVoxels:
-		Scale: 1.8
-        NormalsPalette: ra2normals
+		Scale: 13.4
+		NormalsPalette: ra2normals
 		LightPitch: 145
 		LightYaw: 860
-		LightAmbientColor: -0.2,-0.2,0,0,0,0
-		LightDiffuseColor: 1.2,1.2,1,0,0,0
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
 ORCATRAN:
 	Inherits: ^EMPableAircraft
@@ -317,7 +317,7 @@ ORCATRAN:
 		Actor: ORCATRAN.Husk.EMP
 		RequiresCondition: empdisable
 	RenderVoxels:
-		Scale: 1.8
+		Scale: 2.1
         NormalsPalette: ra2normals
 		LightPitch: 145
 		LightYaw: 860
@@ -376,7 +376,7 @@ TRNSPORT:
 		Actor: TRNSPORT.Husk.EMP
 		RequiresCondition: empdisable
 	RenderVoxels:
-		Scale: 1.8
+		Scale: 2.1
         NormalsPalette: ra2normals
 		LightPitch: 145
 		LightYaw: 860

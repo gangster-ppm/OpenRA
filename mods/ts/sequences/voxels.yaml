@@ -1,6 +1,9 @@
 mcv:
 	idle:
 
+mcvnod:
+	idle:
+
 harv:
 	idle:
 	unload: horv

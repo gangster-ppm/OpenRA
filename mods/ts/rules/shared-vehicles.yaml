@@ -30,7 +30,7 @@ MCV:
 		PauseOnCondition: empdisable || being-captured
 		IntoActor: gacnst
 		Offset: -1,-1
-		Facing: 96
+		Facing: 384
 		TransformSounds: place2.aud
 		NoTransformSounds:
 		Voice: Move
@@ -43,7 +43,55 @@ MCV:
 		Scale: 1.2
 		LightPitch: 145
 		LightYaw: 860
-        LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
+
+MCVNOD:
+	Inherits: ^Tank
+	Inherits@VOXELS: ^VoxelActorRA_Normals
+	Inherits@selection: ^SelectableSupportUnit
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 160
+		Prerequisites: ~factory, tech, ~techlevel.medium
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Mobile Construction Vehicle
+	Selectable:
+		DecorationBounds: 42,42
+	Health:
+		HP: 100000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 42
+	RevealsShroud:
+		RequiresCondition: !inside-tunnel
+		Range: 6c0
+		MaxHeightDelta: 3
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	BaseBuilding:
+	Transforms:
+		PauseOnCondition: empdisable || being-captured
+		IntoActor: gacnst
+		Offset: -1,-1
+		Facing: 384
+		TransformSounds: place2.aud
+		NoTransformSounds:
+		Voice: Move
+	RenderSprites:
+		Image: mcv.gdi
+		FactionImages:
+			gdi: mcv.gdi
+			nod: mcv.nod
+	RenderVoxels:
+		Scale: 1.2
+		LightPitch: 145
+		LightYaw: 860
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
 		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
 HARV:
@@ -63,7 +111,7 @@ HARV:
 		Bounds: 36,36
 		DecorationBounds: 36,36
 	Harvester:
-		DeliveryBuildings: proc
+		DeliveryBuildings: proc, narefn, garefn
 		Capacity: 28
 		Resources: Tiberium, BlueTiberium
 		BaleLoadDelay: 15
@@ -119,7 +167,7 @@ HARV:
 		Scale: 1.23
 		LightPitch: 145
 		LightYaw: 860
-        LightAmbientColor: -0.21,-0.21,0,0,0,0
+		LightAmbientColor: -0.21,-0.21,0,0,0,0
 		LightDiffuseColor: 1.03,1.03,0.89,0,0,0
 
 LPST:

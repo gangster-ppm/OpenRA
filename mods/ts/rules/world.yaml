@@ -297,8 +297,13 @@ World:
 	MPStartUnits@MCV:
 		Class: none
 		ClassName: MCV Only
-		Factions: gdi, nod
+		Factions: gdi
 		BaseActor: mcv
+	MPStartUnits@MCVNOD:
+		Class: none
+		ClassName: MCV Only
+		Factions: nod
+		BaseActor: mcvnod
 	MPStartUnits@light.gdi:
 		Class: light
 		ClassName: Light
@@ -311,7 +316,7 @@ World:
 		Class: light
 		ClassName: Light
 		Factions: nod
-		BaseActor: mcv
+		BaseActor: mcvnod
 		SupportActors: e1,e1,e1,bggy
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
@@ -327,7 +332,7 @@ World:
 		Class: medium
 		ClassName: Medium
 		Factions: nod
-		BaseActor: mcv
+		BaseActor: mcvnod
 		SupportActors: e1,e1,e3,e3,cyborg,bggy
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
@@ -343,7 +348,7 @@ World:
 		Class: heavy
 		ClassName: Heavy
 		Factions: nod
-		BaseActor: mcv
+		BaseActor: mcvnod
 		SupportActors: e1,e1,e3,e3,cyborg,bggy,bike,ttnk
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5

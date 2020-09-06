@@ -12,6 +12,10 @@ mcv.nod:
 	Inherits: ^VehicleOverlays
 	icon: sidebar-nod|mcvicon
 
+mcvnod:
+	Inherits: ^VehicleOverlays
+	icon: sidebar-nod|mcvicon
+
 apc:
 	Inherits: ^VehicleOverlays
 	icon: apcicon
@@ -26,6 +30,8 @@ harv.gdi:
 
 harv.nod:
 	Inherits: ^VehicleOverlays
+	Defaults:
+		Offset: 0, 0, 424
 	harvest: harvestr
 		Length: *
 		ZRamp: 1
