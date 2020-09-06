@@ -171,35 +171,66 @@ garefn:
 
 narefn:
 	Defaults: ntrefn
-		Offset: -12, -42, 20
+		Offset: -29, -58, 20
 		DepthSpriteOffset: 22, 0
 		UseTilesetCode: true
 		DepthSprite: isodepth.shp
-	idle:
+	idle: ntrefn_1
+		ShadowStart: 2
+	damaged-idle: ntrefn_1
+		Start: 1
 		ShadowStart: 3
-	damaged-idle:
+	idle-roof: ntrefn_2
+		ShadowStart: 3
+		ZOffset: 512
+	damaged-idle-roof: ntrefn_2
 		Start: 1
 		ShadowStart: 4
-	dead:
+		ZOffset: 512
+	dead: ntrefn
 		Start: 2
 		ShadowStart: 5
 		Tick: 400
+	idle-remaps: ntrefn_rmp
+		ShadowStart: 4
+		ZOffset: 1024
+	damaged-remaps: ntrefn_rmp
+		Start: 1
+		ShadowStart: 5
+		ZOffset: 1024
+	dead-remaps: ntrefn_rmp
+		Start: 2
+		ShadowStart: 5
+		ZOffset: 1024
 	make: ntrefnmk
 		Length: 20
 		ShadowStart: 20
-		Offset: -12, -42, 43
+		Offset: -29, -58, 43
 		DepthSpriteOffset: -12, 0
 	flame: ntrefn_b
 		Length: *
 	unload-overlay: narefn_a
-		Length: *
+		Length: 64
 		ZOffset: 1024
+		Tick: 72
 	idle-redlights: ntrefn_c
 		Length: 16
-		Tick: 120
+		Tick: 100
+		ZOffset: 2024
 	damaged-idle-redlights: ntrefn_c
 		Length: 16
-		Tick: 120
+		Tick: 100
+		ZOffset: 2024
+	idle-redlights2: ntrefn_c_g
+		Length: 16
+		Tick: 100
+		ZOffset: 3048
+		BlendMode: Additive
+	damaged-idle-redlights2: ntrefn_c_g
+		Length: 16
+		Tick: 100
+		ZOffset: 3048
+		BlendMode: Additive
 	bib: ntrefnbb
 		Length: 1
 		ZOffset: -1024
@@ -209,13 +240,13 @@ narefn:
 	damaged-bib: ntrefnbb
 		Start: 1
 		ZOffset: -1024
-		Offset: -12, -42, 5
+		Offset: -29, -58, 5
 		ZRamp: 1
 		-DepthSprite:
 	dead-bib: ntrefnbb
 		Start: 2
 		ZOffset: -1024
-		Offset: -12, -42, 5
+		Offset: -29, -58, 5
 		ZRamp: 1
 		-DepthSprite:
 	emp-overlay: emp_fx01

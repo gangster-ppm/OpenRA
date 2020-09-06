@@ -311,3 +311,21 @@ fgtnbus:
 	muzzle: gunfire
 		Length: *
 	icon: apcicon
+
+hurv:
+	Inherits: ^VehicleOverlays
+
+hurvgdi:
+	Inherits: ^VehicleOverlays
+
+tdboat:
+	Inherits: ^VehicleOverlays
+
+tdbike:
+	Inherits: ^VehicleOverlays
+
+tdbggy:
+	Inherits: ^VehicleOverlays
+
+mmch2:
+	Inherits: ^VehicleOverlays

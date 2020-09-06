@@ -192,7 +192,7 @@ NAREFN:
 		MaxHeightDelta: 3
 	TiberianSunRefinery:
 		DockAngle: 640
-		DockOffset: 2,1
+		DockOffset: 3,1
 		DiscardExcessResources: true
 	StoresResources:
 		Capacity: 2000
@@ -202,27 +202,36 @@ NAREFN:
 		Actor: HARV
 		SpawnOffset: 2,1
 		Facing: 160
+	WithIdleOverlay@ROOF:
+		RequiresCondition: !build-incomplete
+		Sequence: idle-roof
 	WithIdleOverlay@REDLIGHTS:
 		RequiresCondition: !build-incomplete
 		Sequence: idle-redlights
+	WithIdleOverlay@REDLIGHTS2:
+		RequiresCondition: !build-incomplete
+		Sequence: idle-redlights2
+		Palette: gradient1
 	WithIdleOverlay@BIB:
 		RequiresCondition: !build-incomplete
 		Sequence: bib
+	WithIdleOverlay@REMAPS:
+		RequiresCondition: !build-incomplete
+		Sequence: idle-remaps
+		IsPlayerPalette: true
+		Palette: player
 	WithDockedOverlay@FLAME:
 		RequiresCondition: !build-incomplete
 		Sequence: flame
 		Palette: effect
 	WithDockingOverlay@UNLOAD:
 		RequiresCondition: !build-incomplete
+		Sequence: unload-overlay
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
 		Palette: nodbuild1
-		Image: proc.nod
-		FactionImages:
-			gdi: proc.nod
-			nod: proc.nod
 	GrantConditionOnPlayerResources:
 		Condition: contains-tiberium
 	Explodes:
